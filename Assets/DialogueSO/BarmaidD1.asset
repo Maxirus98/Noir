@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
+  m_Name: BarmaidD1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: Noir
+    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
+    text: Bonjour
+    typingSpeed: 0.05
+  - speaker: Barmaid
+    sprite: {fileID: -2216033458992054209, guid: 62c7cb85d1c15b44db9ea78f50c60da1, type: 3}
+    text: "Qu'est-ce que vous voulez d\xE9tective ?"
+    typingSpeed: 0.05
+  - speaker: Noir
+    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
+    text: Je cherche quelqu'un.
+    typingSpeed: 0.05
