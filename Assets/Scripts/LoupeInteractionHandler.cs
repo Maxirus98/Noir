@@ -27,6 +27,8 @@ public class LoupeInteractionHandler : MonoBehaviour
     {
         Vector2 mousePosition = mouseAction.ReadValue<Vector2>();
         loupeSliderInstance.SetActive(loupeInspectAction.IsPressed());
+        // TODO: Play sound when pressed
+
         transform.position = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, Camera.main.nearClipPlane));
 
         if (!loupeSliderInstance.activeInHierarchy)
@@ -35,38 +37,43 @@ public class LoupeInteractionHandler : MonoBehaviour
         }
         else
         {
-            timeInspecting += Time.deltaTime;
-            timeInspecting = Mathf.Min(timeInspecting, 1f);
-            finishInspecting = timeInspecting >= 1f;
-            var sliderSR = loupeSliderInstance.GetComponent<SpriteRenderer>();
-            sliderSR.material.SetFloat("_Frac", timeInspecting);
+            InspectLoupeArea();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /// <summary>
+    /// Set visual effect for the LoupeArea when pressed
+    /// </summary>
+    private void InspectLoupeArea()
     {
-        if (collision.gameObject.CompareTag("Indice"))
-        {
-            Debug.Log("Enter indice");
-            if (finishInspecting)
-            {
-                Debug.Log("finishInspecting indice");
-                collision.GetComponent<SpriteRenderer>().color = Color.green;
-            }
-        }
+        timeInspecting += Time.deltaTime;
+        timeInspecting = Mathf.Min(timeInspecting, 1f);
+        finishInspecting = timeInspecting >= 1f;
+        var sliderSR = loupeSliderInstance.GetComponent<SpriteRenderer>();
+
+        // Manage custom shader circular slider
+        sliderSR.material.SetFloat("_Frac", timeInspecting);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Indice"))
         {
-            Debug.Log("Stay indice");
             if (finishInspecting)
             {
-                Debug.Log("finishInspecting indice");
-                collision.GetComponent<SpriteRenderer>().color = Color.green;
+                OnFinishInspecting();
             }
         }
+    }
+
+    /// <summary>
+    /// Audio visual effect that triggers when the inspection is done and add the indice found to the note system.
+    /// </summary>
+    private void OnFinishInspecting()
+    {
+        // TODO: Spawn visual effect when inspection is successful or not
+        // TODO: Play sound when when inspection is successful or not
+        // TODO: Add note when inspection is successful
     }
 
     private void OnDestroy()

@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +10,8 @@ public class InspectionManager : MonoBehaviour
     GameObject loupeAreaHiddenInstance;
 
     InputAction loupeModeAction;
+
+    // TODO: Disable CharacterController when Loupe is on.
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
