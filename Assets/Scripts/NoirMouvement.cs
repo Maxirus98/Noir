@@ -1,8 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-
 public class NoirMouvement : MonoBehaviour
 {
     public float speed = 5f;

@@ -63,5 +63,16 @@ public class InputManager : MonoBehaviour
     }
 
 
+    public void DisablePlayerMovement()
+    {
+        Inputs.Player.Move.Disable();
+    }
+
+    public void EnablePlayerMovement()
+    {
+        Inputs.Player.Move.Enable();
+    }
+
+
 
 }

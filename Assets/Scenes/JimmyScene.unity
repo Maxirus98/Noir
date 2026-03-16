@@ -541,6 +541,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5690016163764099170, guid: bcc2001712499424c818910bec5ebc67, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: df70fa95-8a34-4494-b137-73ab6b9c7d37
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690016163764099170, guid: bcc2001712499424c818910bec5ebc67, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690016163764099170, guid: bcc2001712499424c818910bec5ebc67, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_ActionId
+      value: b87671d6-c797-4c9b-b89a-44ddb52604a8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690016163764099170, guid: bcc2001712499424c818910bec5ebc67, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionId
+      value: caefa78b-bdfa-48e3-8cd0-de4a5614170f
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690016163764099170, guid: bcc2001712499424c818910bec5ebc67, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionName
+      value: 'UI/Pause[/DualShock4GamepadHID/start,/Keyboard/escape]'
+      objectReference: {fileID: 0}
     - target: {fileID: 7155794255081174873, guid: bcc2001712499424c818910bec5ebc67, type: 3}
       propertyPath: m_Name
       value: Noir

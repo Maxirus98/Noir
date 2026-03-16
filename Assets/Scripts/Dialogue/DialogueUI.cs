@@ -10,7 +10,7 @@ public class DialogueUI : MonoBehaviour
     public TextMeshProUGUI speakerText;
     public Image image;
     public TextMeshProUGUI dialogueText;
-    public float typingSpeed;
+    float typingSpeed;
 
     private Coroutine typingCoroutine;
 
@@ -42,7 +42,7 @@ public class DialogueUI : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        IsTyping = false;
+        //IsTyping = false;
     }
 
     public void SkipTyping()
@@ -57,5 +57,10 @@ public class DialogueUI : MonoBehaviour
     public void Hide()
     {
         dialoguePanel?.SetActive(false);
+    }
+
+    public void Show()
+    {
+        dialoguePanel?.SetActive(true);
     }
 }
