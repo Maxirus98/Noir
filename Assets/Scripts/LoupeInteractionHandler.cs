@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class LoupeInteractionHandler : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject clueFound;
+    private GameObject clueFoundInstance;
+
     private GameObject loupeSliderInstance;
     private InputAction loupeInspectAction;
     private InputAction mouseAction;
@@ -57,12 +62,10 @@ public class LoupeInteractionHandler : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Indice"))
+        var isOverIndice = collision.gameObject.CompareTag("Indice");
+        if (isOverIndice && finishInspecting)
         {
-            if (finishInspecting)
-            {
-                OnFinishInspecting();
-            }
+            OnFinishInspecting();
         }
     }
 
@@ -71,9 +74,10 @@ public class LoupeInteractionHandler : MonoBehaviour
     /// </summary>
     private void OnFinishInspecting()
     {
-        // TODO: Spawn visual effect when inspection is successful or not
-        // TODO: Play sound when when inspection is successful or not
-        // TODO: Add note when inspection is successful
+        if(clueFoundInstance == null)
+        {
+            clueFoundInstance = Instantiate(clueFound, transform.position, Quaternion.identity);
+        }
     }
 
     private void OnDestroy()

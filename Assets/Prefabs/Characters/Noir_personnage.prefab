@@ -343,6 +343,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4ee8640af0ee1014a96403c1cd524645, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1691103761300602894}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4ee8640af0ee1014a96403c1cd524645, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 712687169950170951}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 4ee8640af0ee1014a96403c1cd524645, type: 3}
 --- !u!1 &1011104525506411330 stripped
 GameObject:
@@ -371,3 +374,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &712687169950170951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011104525506411330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbaca02239b81c489b022bf860bf5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectionManager
+  loupe: {fileID: 8128144314108275352, guid: a0a6e19f18310314586d9fab26995e96, type: 3}
+  loupeAreaHidden: {fileID: 1347531045589132073, guid: 896a223b85f82d3408cd791cfa7ed84e, type: 3}
+  clueFound: {fileID: 8562589653719020502, guid: 5aee132fc63853547ab773a160de7c3a, type: 3}
