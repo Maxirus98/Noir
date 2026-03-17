@@ -26,7 +26,7 @@ public class ClueFoundHandler : MonoBehaviour
 
     private void OnDestroy()
     {
-        NoteUiManager.SetData(indiceData);
+        NoteUiManager.SetNoteData(indiceData);
         NoteUiManager.ToggleNoteUi();
     }
 }

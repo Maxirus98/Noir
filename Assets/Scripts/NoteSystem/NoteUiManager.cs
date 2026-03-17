@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +25,7 @@ public class NoteUiManager : MonoBehaviour
     private void Start()
     {
         noteUi = transform.GetChild(0).gameObject;
-        noteAnimator = GetComponentInChildren<Animator>();
+        noteAnimator = GetComponentInChildren<Animator>(true);
     }
 
     public void CloseNote()
@@ -40,7 +38,7 @@ public class NoteUiManager : MonoBehaviour
         noteUi.SetActive(!noteUi.activeInHierarchy);
     }
 
-    public static void SetData(IndiceData indiceData)
+    public static void SetNoteData(IndiceData indiceData)
     {
         var texts = noteUi.GetComponentsInChildren<TextMeshProUGUI>(true);
         var description = texts[0].text = indiceData.Description;
