@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 229208905615971850}
   - component: {fileID: 6050058575978642515}
   - component: {fileID: 4636346529927863351}
+  - component: {fileID: 7908823779184515895}
   m_Layer: 0
   m_Name: ClueFound
   m_TagString: Untagged
@@ -104,3 +105,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29d47c00e4c15741b3d9779cdf83027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClueFoundHandler
+--- !u!95 &7908823779184515895
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8562589653719020502}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b29afd7cfb7ac704590e65e90746871c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
