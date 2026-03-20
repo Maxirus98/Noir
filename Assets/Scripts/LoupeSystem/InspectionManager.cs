@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Script on the player to spawn Loupe
+/// </summary>
 public class InspectionManager : MonoBehaviour
 {
     [SerializeField] GameObject loupe;

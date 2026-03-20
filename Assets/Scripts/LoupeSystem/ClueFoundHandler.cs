@@ -2,7 +2,8 @@ using UnityEngine;
 
 
 /// <summary>
-/// Script sur le ClueFound prefab qui fait disparaitre la loupe lorsque l'indice est trouvé et se charge de faire apparaitre un effet visuel, joue un son et se détruit automatiquement
+/// Script sur le ClueFound prefab qui fait disparaitre la loupe lorsque l'indice est trouvé et se charge de faire apparaitre un effet visuel,
+/// joue un son et se détruit automatiquement
 /// </summary>
 public class ClueFoundHandler : MonoBehaviour
 {

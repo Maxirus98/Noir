@@ -76,7 +76,7 @@ public class LoupeInteractionHandler : MonoBehaviour
     /// </summary>
     private void OnFinishInspecting(Vector3 cluePosition, Indice indice)
     {
-        if(clueFoundInstance == null)
+        if(clueFoundInstance == null && !indice.clueFound)
         {
             clueFoundInstance = Instantiate(clueFound, cluePosition, Quaternion.identity);
             var handler = clueFoundInstance.GetComponent<ClueFoundHandler>();
@@ -86,6 +86,12 @@ public class LoupeInteractionHandler : MonoBehaviour
 
             // Pass the indice data info to the clue found instance
             handler.indiceData = indice.data;
+
+            // Add indice data with name as key and json objet as value to player prefs
+            NoteSaveManager.SaveNote(indice.data);
+
+            // Indice clueFound prevents you form always finding the same indice.
+            indice.clueFound = true;
         }
     }
 

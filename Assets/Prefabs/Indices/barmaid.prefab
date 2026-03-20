@@ -152,3 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   <data>k__BackingField: {fileID: 11400000, guid: 51fad5529c860a947b56aadcccdb114d, type: 2}
+  <clueFoundScale>k__BackingField: 0.8
+  <clueFound>k__BackingField: 0
