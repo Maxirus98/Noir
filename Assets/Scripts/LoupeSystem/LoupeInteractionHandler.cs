@@ -63,10 +63,10 @@ public class LoupeInteractionHandler : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        var isOverIndice = collision.gameObject.CompareTag("Indice");
+        Indice indice;
+        var isOverIndice = collision.TryGetComponent<Indice>(out indice);
         if (isOverIndice && finishInspecting)
         {
-            var indice = collision.GetComponent<Indice>();
             OnFinishInspecting(collision.transform.position, indice);
         }
     }

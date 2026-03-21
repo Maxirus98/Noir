@@ -1,13 +1,26 @@
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// This script is on a gameobject of type Indice
+/// </summary>
 public class Indice : MonoBehaviour
 {
+    /// <summary>
+    /// The scriptable object created specific for this indice
+    /// </summary>
     [field: SerializeField]
     public IndiceData data { get; private set; }
+
+    /// <summary>
+    /// The scale to spawn the (!) clueFound sprite.
+    /// </summary>
     [field: SerializeField]
     public float clueFoundScale { get; set; }
 
+    /// <summary>
+    /// Indice is not interactable with if marked as found.
+    /// </summary>
     [field: SerializeField]
 
     public bool clueFound { get; set; }

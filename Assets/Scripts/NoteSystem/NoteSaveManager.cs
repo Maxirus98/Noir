@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using System.IO;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -31,6 +29,9 @@ public class NotesListWrapper
     }
 }
 
+/// <summary>
+/// Static class to save notes in a json file
+/// </summary>
 public static class NoteSaveManager
 {
     private static string savePath;
@@ -66,6 +67,11 @@ public static class NoteSaveManager
         File.WriteAllText(savePath, jsonNotes);
     }
 
+    /// <summary>
+    /// Acquire the saved notes in the json file. If not found, create a new empty json file.
+    /// The Json can be found on Windows in the User > username > AppData > CompanyName > Noir > notes.json
+    /// </summary>
+    /// <returns></returns>
     public static NotesListWrapper GetSavedNotes()
     {
         string json = "";
