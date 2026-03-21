@@ -1,6 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Script on the notepad that shows and populate the different texts inside the notepad. It also manages up to 5 pages for a total of 50 notes.
@@ -19,7 +23,10 @@ public class NotepadUiManager : MonoBehaviour
     [SerializeField]
     private Transform pageBtnsContainer;
     private List<Note> notes;
-    
+
+    [SerializeField]
+    private Transform onSelectNotePopup;
+
     private void OnEnable()
     {
         // Populate the note list
@@ -52,20 +59,37 @@ public class NotepadUiManager : MonoBehaviour
     public void SetContentForPage(int page)
     {
         currentPage = page;
-        Debug.Log($"Set content for page {page}");
-        // TODO: Refactor. Takes the smallest array between the 2 to prevent out of bound exception
-        // notePadTexts.Length is ALWAYS 12 (12 children texts)
-        var smallestArraySize = notePadTexts.Length <= notes.Count ? notePadTexts.Length : notes.Count;
+        List<string> currentPageDescriptions = new(NOTES_PER_PAGE);
 
-        for(int i = 0;i < smallestArraySize; i++)
+        for (int i = 0;i < NOTES_PER_PAGE; i++)
         {
-            // Variable to handle pages and what to render in the text box according to the current selected page
-            // var nextPageIncrement = currentPage > 1 ? currentPage + (currentPage * NOTES_PER_PAGE) : currentPage;
-            int startIndexForPage = i + (page * NOTES_PER_PAGE) - NOTES_PER_PAGE;
-            if (notes.Count > 0 && notes[startIndexForPage] != null)
+            notePadTexts[i].text = "";
+            var currentIndex = i + (page * NOTES_PER_PAGE) - NOTES_PER_PAGE;
+            if(currentIndex < notes.Count)
             {
-                notePadTexts[i].text = notes[startIndexForPage]?.Description;
+                currentPageDescriptions.Add(notes[currentIndex]?.Description);
+                notePadTexts[i].text = currentPageDescriptions[i];
             }
+        }
+    }
+
+    /// <summary>
+    /// Set the content for the popup note when hovering a note's description on the notepad
+    /// </summary>
+    /// <param name="index">On the hover, the index is set as the position in the list of notepad texts 0 being the first notepadText transform</param>    
+    public void SetNotePopupUiContent(int index)
+    {
+        // Check how many pages there is according to how many notes were saved.
+        var currentIndex = index + (currentPage * NOTES_PER_PAGE) - NOTES_PER_PAGE;
+        var noteDescription = onSelectNotePopup.GetChild(1).GetComponent<TextMeshProUGUI>();
+        var noteImage = onSelectNotePopup.GetChild(2).GetComponent<Image>();
+        var noteExtraInfo = onSelectNotePopup.GetChild(3).GetComponent<TextMeshProUGUI>();
+
+        if (currentIndex < notes.Count)
+        {
+            noteDescription.text = notes[currentIndex]?.Description;
+            noteImage.sprite = (Sprite) AssetDatabase.LoadAssetAtPath(notes[currentIndex]?.SpritePath, typeof(Sprite));
+            noteExtraInfo.text = notes[currentIndex]?.ExtraInformation;
         }
     }
 }
