@@ -1,22 +1,17 @@
-public enum TypeFenetre
+[System.Flags]
+public enum WindowElement
 {
-    Aucun,
-    Rideaux,
-    Stores,
-    Ouverte,
-    Fermee
+    None = 0,
+    Balcony = 1,
+    Curtains = 2,
+    Silhouette = 4
 }
 
-public enum TypeBalcon
+public enum SilhouetteType
 {
-    Aucun,
-    Balcon
-}
-
-public enum TypeSilhouette
-{
-    Aucun,
-    Mince,
-    Large,
-    LongManteau
+    None,
+    LongCoat,
+    Thin,
+    Tall,
+    Small
 }
