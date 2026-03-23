@@ -42,5 +42,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ClueFound
+    uniqueID: 1539499875
+    locked: 0
   m_RenderingLayers:
   - Default
