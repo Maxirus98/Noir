@@ -9,6 +9,9 @@ public class NoirMouvement : MonoBehaviour
 
     private Vector2 movement;
 
+    [SerializeField] private Animator anim;
+    
+
     public void OnMove(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
@@ -22,6 +25,16 @@ public class NoirMouvement : MonoBehaviour
         {
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         }
+
+        if (movement.magnitude != 0)
+        {
+            anim.SetFloat("Movement", speed, 0.1f, Time.deltaTime);
+        }
+        else 
+        {
+            anim.SetFloat("Movement", 0);
+        }
+
     }
 
     void Update()

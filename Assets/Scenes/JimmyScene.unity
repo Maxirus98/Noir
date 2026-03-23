@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightBlink
   myLight: {fileID: 492963311}
-  blinkSequence: '.-.---..-. '
+  blinkSequence: '.-.---..-.. '
   dotTime: 0.3
   dashTime: 1
   pauseTime: 0.2
@@ -1854,6 +1854,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472939827}
   m_CullTransparentMesh: 1
+--- !u!95 &1485272091 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4479778249734732542, guid: bcc2001712499424c818910bec5ebc67, type: 3}
+  m_PrefabInstance: {fileID: 5586702410533326598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1495403217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,8 +3008,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 188854852545944159, guid: bcc2001712499424c818910bec5ebc67, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1485272091}
+    - target: {fileID: 188854852545944159, guid: bcc2001712499424c818910bec5ebc67, type: 3}
       propertyPath: speed
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3580604830416598096, guid: bcc2001712499424c818910bec5ebc67, type: 3}
       propertyPath: m_LocalScale.x

@@ -21,6 +21,7 @@ public class KeypadActive : MonoBehaviour
     {
         if (playerInRange && keypad != null)
             keypad.SetActive(true);
+       
     }
 
 
@@ -29,8 +30,9 @@ public class KeypadActive : MonoBehaviour
 
         if (!puzzleSolved && playerInRange && keypad != null)
         {
-            keypad.SetActive(true);
+            keypad.SetActive(true);        
         }
+       
 
     }
 
@@ -54,6 +56,6 @@ public class KeypadActive : MonoBehaviour
         keypad.SetActive(false); // hide keypad
         playerInRange = false;
         triggerCollider.enabled = false; //Disable interact
-
+     
     }
 }
