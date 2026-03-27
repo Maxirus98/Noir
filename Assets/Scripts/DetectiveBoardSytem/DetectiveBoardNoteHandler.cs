@@ -16,9 +16,22 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     private List<GameObject> boardNotes;
 
     /// <summary>
-    /// Check the notes that were added to avoid duplicate
+    /// Check the notes that were added to avoid duplicates
     /// </summary>
-    private List<Note> notesAdded = new();
+    private List<Note?> notesAdded = new(5);
+
+    /// <summary>
+    /// Remove board note at the corresponding index in the note gameObjects List and 
+    /// the List of notes that is currently on the board
+    /// </summary>
+    /// <param name="transformSiblingIndex"></param>
+    public void RemoveBoardNoteAt(int transformSiblingIndex)
+    {
+        // -1 because the transformSiblingIndex starts at 0 but 0 is the background and
+        // not our corresponding note object which is index 1.
+        notesAdded[transformSiblingIndex - 1] = null;
+        boardNotes[transformSiblingIndex - 1].SetActive(false);
+    }
 
     /// <summary>
     /// Set the next available board note that is not filled
@@ -27,7 +40,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     public void SetNextBoardNote(Note note)
     {
         // avoid duplicate entry of a note by Id
-        if (notesAdded.Exists(n => n.Id == note.Id))
+        if (notesAdded.Exists(n => n?.Id == note.Id))
         {
             // TODO: Sound and GUI Feedback if exists
             return;
@@ -37,7 +50,17 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
 
         if (boardNote == null) return;
 
-        notesAdded.Add(note);
+        // Replace the first null if found otherwise append it to the end of the list
+        var firstNullIndex = notesAdded.FindIndex(n => n == null);
+        if (firstNullIndex > -1)
+        {
+            notesAdded[firstNullIndex] = note;
+        }
+        else
+        {
+            notesAdded.Add(note);
+        }
+
         SetBoardNoteContentFor(boardNote, note);
         CheckToSolve();
     }
@@ -46,8 +69,13 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     {
         if(notesAdded.Count >= NOTES_COUNT_NEEDED_TO_SOLVE)
         {
-            // Show the wires
+            // Show the wires that will be animated and draw themselves on the board
 
+            // If the solution is good the wire will flash green and an ending cinematic will show
+            // Play right solution sound
+
+            // If the solution is wrong the wire will flash red and the board will be cleared
+            // Play wrong solution sound
         }
     }
 

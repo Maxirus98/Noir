@@ -15,8 +15,6 @@ public class NoteDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     /// </summary>
     [SerializeField]
     private GameObject noteDragTemp;
-
-    private IndiceData dataToDrag;
     private InputAction mouseAction;
 
     private void Start()
