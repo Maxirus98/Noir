@@ -66,7 +66,11 @@ public class NotepadUiManager : MonoBehaviour
             if(currentIndex < notes.Count)
             {
                 currentPageDescriptions.Add(notes[currentIndex]?.Description);
+                // Set note text at position
                 notePadTexts[i].text = currentPageDescriptions[i];
+                
+                // Set note id reference at position
+                notePadTexts[i].GetComponent<NoteDragHandler>().NoteId = notes[currentIndex].Id;
             }
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -90,5 +91,11 @@ public static class NoteSaveManager
 
         // Convert the JSON string back to a PlayerDataManager object
         return JsonUtility.FromJson<NotesListWrapper>(json);
+    }
+
+    public static Note GetNoteById(int id)
+    {
+        var nw = GetSavedNotes();
+        return nw.notes.FirstOrDefault(n => n.Id == id);
     }
 }
