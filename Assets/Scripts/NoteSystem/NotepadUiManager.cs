@@ -65,7 +65,7 @@ public class NotepadUiManager : MonoBehaviour
             var currentIndex = i + (page * NOTES_PER_PAGE) - NOTES_PER_PAGE;
             if(currentIndex < notes.Count)
             {
-                currentPageDescriptions.Add(notes[currentIndex]?.Description);
+                currentPageDescriptions.Add(notes[currentIndex].Description);
                 // Set note text at position
                 notePadTexts[i].text = currentPageDescriptions[i];
                 
@@ -89,9 +89,9 @@ public class NotepadUiManager : MonoBehaviour
 
         if (currentIndex < notes.Count)
         {
-            noteDescription.text = notes[currentIndex]?.Description;
-            noteImage.sprite = (Sprite) AssetDatabase.LoadAssetAtPath(notes[currentIndex]?.SpritePath, typeof(Sprite));
-            noteExtraInfo.text = notes[currentIndex]?.ExtraInformation;
+            noteDescription.text = notes[currentIndex].Description;
+            noteImage.sprite = (Sprite) AssetDatabase.LoadAssetAtPath(notes[currentIndex].SpritePath, typeof(Sprite));
+            noteExtraInfo.text = notes[currentIndex].ExtraInformation;
         }
     }
 }

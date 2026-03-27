@@ -2,17 +2,23 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Script component on the background of the detective board to get the content of the notes on the board
+/// Script component on the background game object of the detective board to get the content of the notes on the board
 /// </summary>
 public class DetectiveBoardNoteHandler : MonoBehaviour
 {
+    private const int NOTES_COUNT_NEEDED_TO_SOLVE = 5;
+    [Tooltip("Board notes gameobjects from the DetectiveBoard")]
     [SerializeField]
     private List<GameObject> boardNotes;
+
+    /// <summary>
+    /// Check the notes that were added to avoid duplicate
+    /// </summary>
+    private List<Note> notesAdded = new();
 
     /// <summary>
     /// Set the next available board note that is not filled
@@ -20,8 +26,29 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     /// <param name="note"></param>
     public void SetNextBoardNote(Note note)
     {
-        var boardNote = boardNotes.First(go => !go.activeInHierarchy);
+        // avoid duplicate entry of a note by Id
+        if (notesAdded.Exists(n => n.Id == note.Id))
+        {
+            // TODO: Sound and GUI Feedback if exists
+            return;
+        }
+        
+        var boardNote = boardNotes.FirstOrDefault(go => !go.activeInHierarchy);
+
+        if (boardNote == null) return;
+
+        notesAdded.Add(note);
         SetBoardNoteContentFor(boardNote, note);
+        CheckToSolve();
+    }
+
+    private void CheckToSolve()
+    {
+        if(notesAdded.Count >= NOTES_COUNT_NEEDED_TO_SOLVE)
+        {
+            // Show the wires
+
+        }
     }
 
     /// <summary>
@@ -31,7 +58,6 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     /// <param name="note">Note reference passed to children to set the board note data</param>
     private void SetBoardNoteContentFor(GameObject boardNote, Note note)
     {
-        if (boardNote == null) return;
         //Activate it
         boardNote.SetActive(true);
 

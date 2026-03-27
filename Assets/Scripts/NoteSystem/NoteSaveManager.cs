@@ -4,8 +4,11 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Note struct to pass to different objects that want the note's information as data
+/// </summary>
 [System.Serializable]
-public class Note
+public struct Note
 {
     public int Id;
     public string SpritePath;
@@ -45,6 +48,7 @@ public static class NoteSaveManager
         // Guard clause if the id already exists in the list.
         if (notes.Exists(n => n.Id == indiceData.Id)) return;
 
+        // Create a Note from the indice data scriptable object and add it to the notes list
         notes.Add(new Note
         {
             Id = indiceData.Id,
@@ -83,16 +87,20 @@ public static class NoteSaveManager
             json = File.ReadAllText(savePath);
         }
         catch (IOException) {
-            // Create new file if not found
+            // Create new save file if not found
             json = "{}";
             File.WriteAllText(savePath, json);
         }
-        
 
         // Convert the JSON string back to a PlayerDataManager object
         return JsonUtility.FromJson<NotesListWrapper>(json);
     }
 
+    /// <summary>
+    /// Get one single note in the notes list
+    /// </summary>
+    /// <param name="id">the note id</param>
+    /// <returns>the first instance with the correct id</returns>
     public static Note GetNoteById(int id)
     {
         var nw = GetSavedNotes();
