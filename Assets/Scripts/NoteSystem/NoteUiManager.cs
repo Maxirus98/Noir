@@ -31,12 +31,6 @@ public class NoteUiManager : MonoBehaviour
         noteAnimator = GetComponentInChildren<Animator>(true);
     }
 
-    //On notepad button in hud
-    public void OnNotepadOpen()
-    {
-        newNoteBadge.SetActive(false);
-    }
-
     public void CloseNote()
     {
         noteAnimator.CrossFade("Close", 0.1f);

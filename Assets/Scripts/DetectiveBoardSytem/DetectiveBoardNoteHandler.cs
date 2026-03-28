@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -11,10 +12,25 @@ using UnityEngine.UI;
 public class DetectiveBoardNoteHandler : MonoBehaviour
 {
     private const int NOTES_COUNT_NEEDED_TO_SOLVE = 5;
+    /// <summary>
+    /// -1 because the transformSiblingIndex starts at 0 but 0 is the background and
+    /// not our corresponding note object which is index 1.
+    /// </summary>
+    private const int NUMBER_OF_SIBLINGS_BEFORE_NOTES_GO = 1;
+    private const float ROPES_ANIMATION_TIME_SECONDS = 3f;
+
     [Tooltip("Board notes gameobjects from the DetectiveBoard")]
     [SerializeField]
     private List<GameObject> boardNotes;
 
+    [Tooltip("Ropes to activate when there is 5 notes on the board to check if the solution is correct or wrong")]
+    [SerializeField]
+    private GameObject ropesCheck;
+
+    [Tooltip("AuidoManager singleton to enable playback one shot sounds or music")]
+    [SerializeField]
+    private AudioManager audioManager;
+    private bool canClearBoardNotes = true;
     /// <summary>
     /// Check the notes that were added to avoid duplicates
     /// </summary>
@@ -27,10 +43,29 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     /// <param name="transformSiblingIndex"></param>
     public void RemoveBoardNoteAt(int transformSiblingIndex)
     {
-        // -1 because the transformSiblingIndex starts at 0 but 0 is the background and
-        // not our corresponding note object which is index 1.
-        notesAdded[transformSiblingIndex - 1] = null;
-        boardNotes[transformSiblingIndex - 1].SetActive(false);
+        // Prevent removing if solution is complete
+        if (boardNotes.Count >= NOTES_COUNT_NEEDED_TO_SOLVE) return;
+        // Make the note at the clicked index null in the notesAdded List
+        notesAdded[transformSiblingIndex - NUMBER_OF_SIBLINGS_BEFORE_NOTES_GO] = null;
+        // Deactivate the board Note at the clicked index
+        boardNotes[transformSiblingIndex - NUMBER_OF_SIBLINGS_BEFORE_NOTES_GO].SetActive(false);
+    }
+
+    /// <summary>
+    /// Clear all the notes. Will be disabled during solution check animation. On a clear all button.
+    /// </summary>
+    public void ClearBoardNotes()
+    {
+        // Disable if solution check animation
+        if(!canClearBoardNotes) return;
+
+        // Clear notes added array
+        notesAdded.Clear();
+        ropesCheck.SetActive(false);
+        // Set inactive all the notes on the board
+        foreach (var boardNote in boardNotes) { 
+            boardNote.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -62,21 +97,50 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
         }
 
         SetBoardNoteContentFor(boardNote, note);
-        CheckToSolve();
-    }
-
-    private void CheckToSolve()
-    {
         if(notesAdded.Count >= NOTES_COUNT_NEEDED_TO_SOLVE)
         {
-            // Show the wires that will be animated and draw themselves on the board
-
-            // If the solution is good the wire will flash green and an ending cinematic will show
-            // Play right solution sound
-
-            // If the solution is wrong the wire will flash red and the board will be cleared
-            // Play wrong solution sound
+            StartCoroutine(nameof(CheckToSolve));
         }
+    }
+
+    /// <summary>
+    /// Activate the rope which will check if the animation has ended
+    /// </summary>
+    private IEnumerator CheckToSolve()
+    {
+        if(!ropesCheck.activeInHierarchy)
+        {
+            // Show the wires that will be animated and draw themselves on the board
+            ropesCheck.SetActive(true);
+
+            // disable board note clear
+            canClearBoardNotes = false;
+        }
+
+        yield return new WaitForSeconds(ROPES_ANIMATION_TIME_SECONDS);
+
+        var solutionIsCorrect = notesAdded.All(n => n?.CanHelpToSolve == true);
+        if (solutionIsCorrect)
+        {
+            // Solution is correct
+            Debug.Log("Solution is correct");
+
+            // TODO: Change Sound Id for Success sound
+            audioManager.PlaySound("UI_Submit");
+            // TODO: Load end game cinematic
+        } else
+        {
+            // Solution is wrong
+            // TODO: Change Sound Id for Fail sound
+            audioManager.PlaySound("UI_Back");
+
+            // Enable board note clear
+            canClearBoardNotes = true;
+            ClearBoardNotes();
+        }
+
+        
+
     }
 
     /// <summary>
@@ -91,6 +155,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
 
         // Set Board Note Description
         boardNote.GetComponentInChildren<TextMeshProUGUI>(true).text = note.Description;
+
         // Set Board Note Image
         var boardNoteImages = boardNote.GetComponentsInChildren<Image>(true);
         var boardNoteImage = boardNoteImages.FirstOrDefault(go => go.name.Equals("NoteImage"));
