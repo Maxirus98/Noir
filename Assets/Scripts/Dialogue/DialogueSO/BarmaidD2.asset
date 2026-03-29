@@ -16,6 +16,7 @@ MonoBehaviour:
   - 2_talked_barmaid
   setFlags:
   - 3_trouver_trois_vol
+  <indiceData>k__BackingField: {fileID: 11400000, guid: bce9b9a2ad141a6448984378653078fb, type: 2}
   lines:
   - speaker: Barmaid
     sprite: {fileID: -2216033458992054209, guid: 62c7cb85d1c15b44db9ea78f50c60da1, type: 3}

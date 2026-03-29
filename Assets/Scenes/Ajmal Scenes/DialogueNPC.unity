@@ -1085,6 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
   dialogueSelector: {fileID: 1365171794}
+  interactionPrompt: {fileID: 0}
 --- !u!4 &1365171791
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,6 +1589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointInteraction
   dialogueSelector: {fileID: 1889377953}
+  interactionPrompt: {fileID: 0}
   triggered: 0
 --- !u!1 &1898537910
 GameObject:
@@ -1839,6 +1841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
   dialogueSelector: {fileID: 2143465038}
+  interactionPrompt: {fileID: 0}
 --- !u!61 &2143465035
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -152,13 +152,13 @@ public class SettingsMenu : Menu
     private void OnEnable()
     {
         MenuInputListener.UINavigate += HandleResolutionNavigate;
-        MenuInputListener.UINavigate += HandlePrintNavigate;
+        //MenuInputListener.UINavigate += HandlePrintNavigate;
     }
 
     private void OnDisable()
     {
         MenuInputListener.UINavigate -= HandleResolutionNavigate;
-        MenuInputListener.UINavigate -= HandlePrintNavigate;
+        //MenuInputListener.UINavigate -= HandlePrintNavigate;
     }
 
     private void HandleResolutionNavigate(Vector2 dir)
@@ -178,10 +178,6 @@ public class SettingsMenu : Menu
         }
     }
 
-    private void HandlePrintNavigate(Vector2 dir)
-    {
-        Debug.Log("Woow two request on the same function from others script MAGNIFIQUE EN BOUCLE !");
-    }
 
 
     public void SetFullscreen(bool isFullscreen)

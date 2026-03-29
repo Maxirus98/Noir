@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueUI dialogueUI;
 
+    private DialogueData currentDialogue;
+
 
     float nextInputTime = 0f;
     [SerializeField] float inputDelay = 0.1f;
@@ -26,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         // Disable input noir 
         FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = false;
 
-        // Vérifier les conditions de progression
+        // Vérifier les conditions
         if (dialogue.requiredFlags != null)
         {
             foreach (string flag in dialogue.requiredFlags)
@@ -38,6 +40,8 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         }
+
+        currentDialogue = dialogue; // set indice data
 
         lines.Clear();
         IsDialogueActive = true;
@@ -52,7 +56,7 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextLine();
 
-        // Appliquer les flags de progression
+        // Flags
         if (dialogue.setFlags != null)
         {
             foreach (string flag in dialogue.setFlags)
@@ -101,7 +105,16 @@ public class DialogueManager : MonoBehaviour
         if (dialogueUI != null)
             dialogueUI.Hide();
 
-        // todo: faire meilleur avec input manager 
+        // sauvegarde l'indice
+        if (currentDialogue != null && currentDialogue.indiceData != null )
+        {
+            NoteSaveManager.SaveNote(currentDialogue.indiceData);
+            Debug.Log("Indice saved: " + currentDialogue.indiceData.name);
+        }
+
+        currentDialogue = null; 
+
+        // Réactiver input
         FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = true;
     }
 
@@ -113,4 +126,6 @@ public class DialogueManager : MonoBehaviour
         if (dialogueUI != null)
             dialogueUI.Hide();
     }
+
+
 }
