@@ -38,6 +38,7 @@ public class EnterLab : MonoBehaviour
         if (playerInRange)
         {
             player.position = teleportPoint.position;
+           
         }
     }
 

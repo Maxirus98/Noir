@@ -8,7 +8,7 @@ public class Keypad : MonoBehaviour
     private string currentInput = "";
 
     public TextMeshProUGUI displayText;
-    public DoorOpen door;
+    public DoorManager door;
     public GameObject keypad;
     public KeypadActive keypadActivescript;
 
@@ -44,7 +44,7 @@ public class Keypad : MonoBehaviour
     {
         if (currentInput == correctCode)
         {
-            door.OpenDoor();
+            door.Interact();
             keypad.SetActive(false);
 
             keypadActivescript.PuzzelSolved();
