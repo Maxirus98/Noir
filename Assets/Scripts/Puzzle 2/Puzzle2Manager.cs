@@ -8,6 +8,7 @@ public class Puzzle2Manager : MonoBehaviour
     [SerializeField] private List<WindowButton> windows; // All puzzle windows
 
     [Header("Sprites")]
+    [SerializeField] private Sprite windowSprite;
     [SerializeField] private Sprite balconySprite;
     [SerializeField] private Sprite curtainsSprite;
 
@@ -89,6 +90,10 @@ public class Puzzle2Manager : MonoBehaviour
 
     void ApplySprites(WindowButton window)
     {
+        // Always apply window background
+        if (window.windowImage != null)
+            window.windowImage.sprite = windowSprite;
+
         // Apply correct sprite based on active elements
         if (window.balconyImage.enabled)
             window.balconyImage.sprite = balconySprite;
