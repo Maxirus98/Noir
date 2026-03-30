@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue.unity
     guid: 567525e18452d0e4aa2e263a5126214a
+  - enabled: 1
+    path: Assets/Scenes/JimmyScenes/BureauTest.unity
+    guid: e267d15c133b2c34eacc312510c52323
+  - enabled: 1
+    path: Assets/Scenes/JimmyScenes/RueTest.unity
+    guid: 4e2518ebbf5e57c4ab20cdefc0b7f944
+  - enabled: 1
+    path: Assets/Scenes/JimmyScenes/BarTest.unity
+    guid: 2331fd878f0b39f4a856e0a8db0ec938
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

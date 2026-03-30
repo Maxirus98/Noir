@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightBlink
   myLight: {fileID: 492963311}
-  blinkSequence: '.-.---..-.. '
+  blinkSequence: '..-.-- '
   dotTime: 0.3
   dashTime: 1
   pauseTime: 0.2
@@ -882,7 +882,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 28.9
+  orthographic size: 34.81
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1949,9 +1949,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d96a74f5c1228c4a964085384bf4571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Keypad
-  correctCode: .-.---..-..
+  correctCode: ..-.--
   displayText: {fileID: 1750388959}
-  door: {fileID: 1066687575}
+  door: {fileID: 0}
   keypad: {fileID: 1495403217}
   keypadActivescript: {fileID: 383944205}
 --- !u!1 &1585099222
