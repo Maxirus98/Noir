@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JimmyScenes/BarTest.unity
     guid: 2331fd878f0b39f4a856e0a8db0ec938
+  - enabled: 1
+    path: Assets/Scenes/JimmyScenes/LabTest.unity
+    guid: de8a250b10d2aaa44af3c241374a7b4d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

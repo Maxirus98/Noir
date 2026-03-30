@@ -4,16 +4,19 @@ using UnityEngine.InputSystem;
 
 public class Keypad : MonoBehaviour
 {
-    public string correctCode = ".-.---..-..";
+    public string correctCode = "";
     private string currentInput = "";
 
     public TextMeshProUGUI displayText;
-    public DoorManager door;
+    public GameObject door;
     public GameObject keypad;
     public KeypadActive keypadActivescript;
 
 
-
+    private void Start()
+    {
+       
+    }
     void Update()
     {
         if (Keyboard.current.qKey.wasPressedThisFrame)
@@ -44,7 +47,7 @@ public class Keypad : MonoBehaviour
     {
         if (currentInput == correctCode)
         {
-            door.Interact();
+            door.GetComponent<BoxCollider2D>().enabled = true;
             keypad.SetActive(false);
 
             keypadActivescript.PuzzelSolved();

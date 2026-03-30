@@ -54,8 +54,9 @@ public class KeypadActive : MonoBehaviour, IInteractable
     {
         puzzleSolved = true; //resolution du puzzle
         keypad.SetActive(false); // hide keypad
-        playerInRange = false; 
+       playerInRange = false;
         bc.enabled = false; //Disable interact 
+        print ("Puzzle Solved");
     }
 
     void IInteractable.Interact()
