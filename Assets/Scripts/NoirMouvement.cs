@@ -19,12 +19,12 @@ public class NoirMouvement : MonoBehaviour
 
         if (movement.x < 0) // A pressed
         {
-            transform.localScale = new Vector3(-0.27f, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-0.21f, transform.localScale.y, transform.localScale.z);
         }
 
         if (movement.x > 0) // D pressed
         {
-            transform.localScale = new Vector3(0.27f, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(0.21f, transform.localScale.y, transform.localScale.z);
         }
 
         if (movement.magnitude != 0)
@@ -59,11 +59,15 @@ public class NoirMouvement : MonoBehaviour
 
         if (scene.name == "BureauTest")
         {
-            transform.localScale = new Vector3(0.27f, 0.27f, 1f);
+            transform.localScale = new Vector3(0.21f, 0.21f, 1f);
         }
         else if (scene.name == "BarTest")
         {
-            transform.localScale = new Vector3(-0.27f, 0.27f, 1f);
+            transform.localScale = new Vector3(-0.21f, 0.21f, 1f);
+        }
+        else if (scene.name == "LabTest") 
+        {
+            transform.localScale = new Vector3(-0.21f, 0.21f, 1f);
         }
     }
 }
