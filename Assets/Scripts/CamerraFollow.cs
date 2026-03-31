@@ -10,12 +10,13 @@ public class CamerraFollow : MonoBehaviour
 
        public Vector3 positionCamera;
 
-       private void Awake()
-      {
+    private void Start()
+    {
            target = GameObject.FindGameObjectWithTag("Player").transform;
-       }
 
-       private void LateUpdate()
+    }
+
+    private void LateUpdate()
        {
         if (target == null) return;
 

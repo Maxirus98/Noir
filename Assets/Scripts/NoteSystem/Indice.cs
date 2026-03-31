@@ -16,7 +16,7 @@ public class Indice : MonoBehaviour
     /// The scale to spawn the (!) clueFound sprite.
     /// </summary>
     [field: SerializeField]
-    public float clueFoundScale { get; set; }
+    public float clueFoundScale { get; set; } = 1f;
 
     /// <summary>
     /// Indice is not interactable with if marked as found.

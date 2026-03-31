@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -27,15 +26,7 @@ public class NoirMouvement : MonoBehaviour
             transform.localScale = new Vector3(0.21f, transform.localScale.y, transform.localScale.z);
         }
 
-        if (movement.magnitude != 0)
-        {
-            anim.SetFloat("Movement", speed, 0.1f, Time.deltaTime);
-        }
-        else 
-        {
-            anim.SetFloat("Movement", 0);
-        }
-
+        anim.SetFloat("Movement", movement.magnitude);
     }
 
     void Update()

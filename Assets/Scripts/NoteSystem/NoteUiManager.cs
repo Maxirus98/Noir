@@ -17,12 +17,15 @@ public class NoteUiManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) { 
+        if (Instance != null) {
+            Destroy(this);
             Debug.Log("Can't have more instance for script" +  Instance.name);
         } else
         {
             Instance = this;
         }
+
+        DontDestroyOnLoad(this);
     }
 
     private void Start()

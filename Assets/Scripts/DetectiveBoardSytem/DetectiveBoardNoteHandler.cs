@@ -28,13 +28,17 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     private GameObject ropesCheck;
 
     [Tooltip("AuidoManager singleton to enable playback one shot sounds or music")]
-    [SerializeField]
     private AudioManager audioManager;
     private bool canClearBoardNotes = true;
     /// <summary>
     /// Check the notes that were added to avoid duplicates
     /// </summary>
     private List<Note?> notesAdded = new(5);
+
+    private void Start()
+    {
+        audioManager = FindAnyObjectByType<AudioManager>();
+    }
 
     /// <summary>
     /// Remove board note at the corresponding index in the note gameObjects List and 
@@ -160,5 +164,10 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
         var boardNoteImages = boardNote.GetComponentsInChildren<Image>(true);
         var boardNoteImage = boardNoteImages.FirstOrDefault(go => go.name.Equals("NoteImage"));
         boardNoteImage.sprite = (Sprite)AssetDatabase.LoadAssetAtPath(note.SpritePath, typeof(Sprite));
+    }
+
+    private void OnDisable()
+    {
+        ClearBoardNotes();
     }
 }

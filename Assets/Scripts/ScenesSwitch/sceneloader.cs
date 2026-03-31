@@ -5,7 +5,6 @@ public class sceneloader : MonoBehaviour
 {
     public static sceneloader instance;
     public GameObject player;
-    public Camera mainCamera;
 
     public Vector3 spawnPosition;
 
@@ -16,7 +15,6 @@ public class sceneloader : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(player);
-            DontDestroyOnLoad(mainCamera.gameObject);
         }
         else
         {
@@ -35,14 +33,6 @@ public class sceneloader : MonoBehaviour
     {
         // Move player
         player.transform.position = spawnPosition;
-
-        // Reattach camera to player
-        mainCamera.transform.position = new Vector3(
-            player.transform.position.x,
-            player.transform.position.y,
-            mainCamera.transform.position.z
-        );
-
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

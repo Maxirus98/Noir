@@ -346,6 +346,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4ee8640af0ee1014a96403c1cd524645, type: 3}
       insertIndex: -1
       addedObject: {fileID: 712687169950170951}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4ee8640af0ee1014a96403c1cd524645, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6372156772550138978}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 4ee8640af0ee1014a96403c1cd524645, type: 3}
 --- !u!1 &1011104525506411330 stripped
 GameObject:
@@ -388,4 +391,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InspectionManager
   loupe: {fileID: 8128144314108275352, guid: a0a6e19f18310314586d9fab26995e96, type: 3}
   loupeAreaHidden: {fileID: 1347531045589132073, guid: 896a223b85f82d3408cd791cfa7ed84e, type: 3}
-  clueFound: {fileID: 8562589653719020502, guid: 5aee132fc63853547ab773a160de7c3a, type: 3}
+--- !u!114 &6372156772550138978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011104525506411330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7774f6607eaa8048a548a38e3d2ed7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectiveBoardTrigger
+  detectiveBoardUi: {fileID: 0}
+  notepadUi: {fileID: 0}
+  isNearBoard: 0
