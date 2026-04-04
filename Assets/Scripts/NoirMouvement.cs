@@ -15,16 +15,11 @@ public class NoirMouvement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
+        Vector3 localScale = transform.localScale;
 
-        if (movement.x < 0) // A pressed
-        {
-            transform.localScale = new Vector3(-0.21f, transform.localScale.y, transform.localScale.z);
-        }
-
-        if (movement.x > 0) // D pressed
-        {
-            transform.localScale = new Vector3(0.21f, transform.localScale.y, transform.localScale.z);
-        }
+        // Flip character according to facing direction and movement direction
+        localScale.x *= movement.x * transform.localScale.x >= 0 ? 1 : -1;
+        transform.localScale = localScale;
 
         anim.SetFloat("Movement", movement.magnitude);
     }
