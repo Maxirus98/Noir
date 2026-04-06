@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
-  m_Name: JournalEgout
+  m_Name: JournalPoubelle
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 4
-  ItemSprite: {fileID: -3253881716625673145, guid: 647039981ba907043a39e2cac3e84d3d, type: 3}
-  Description: "Le journal du mois pass\xE9e"
-  ExtraInformation: "Publicit\xE9: Suivez les tendances fen\xEAtes! Passez inaper\xE7u
-    avec nos rideaux 100% polyester! 199,99$ taxes en sus."
+  Id: 5
+  ItemSprite: {fileID: 4472435605925569965, guid: 647039981ba907043a39e2cac3e84d3d, type: 3}
+  Description: "Le journal de la semaine pass\xE9e"
+  ExtraInformation: Sentez-vous au top du top du top de la loi de la rue avec votre
+    long manteau transparent!
   CanHelpToSolve: 0
   InvestigationSlotType: 0
