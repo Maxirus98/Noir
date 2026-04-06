@@ -2030,7 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff5cc947c43c174c9442e38a6ef076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  newNoteBadge: {fileID: 4745644781483547497}
+  newNoteBadge: {fileID: 8151658191151528309}
 --- !u!1 &2424755148584137940
 GameObject:
   m_ObjectHideFlags: 0
