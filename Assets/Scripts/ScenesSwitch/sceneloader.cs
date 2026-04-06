@@ -6,6 +6,7 @@ public class sceneloader : MonoBehaviour
     public static sceneloader instance;
     public GameObject player;
     public Camera mainCamera;
+    public Canvas ui;
 
     public Vector3 spawnPosition;
 
@@ -17,6 +18,7 @@ public class sceneloader : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(player);
             DontDestroyOnLoad(mainCamera.gameObject);
+            DontDestroyOnLoad(ui);
         }
         else
         {
