@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
   m_Name: JournalPoubelle
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 5
-  ItemSprite: {fileID: 4472435605925569965, guid: 647039981ba907043a39e2cac3e84d3d, type: 3}
+  Id: 6
+  ItemSprite: {fileID: -4543216482208450230, guid: 647039981ba907043a39e2cac3e84d3d, type: 3}
   Description: "Le journal de la semaine pass\xE9e"
   ExtraInformation: Sentez-vous au top du top du top de la loi de la rue avec votre
     long manteau transparent!

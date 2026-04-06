@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
   m_Name: BarmaidData
   m_EditorClassIdentifier: Assembly-CSharp::Indice
-  Id: 31
+  Id: 1
   ItemSprite: {fileID: -2714033257743725762, guid: f1dc2be91482eed4e95df8cb79f917fc, type: 3}
   Description: "La barmaid d\xE9c\xE9d\xE9e"
   ExtraInformation: "La barmaid est morte sur le plancher du bar. Elle semble avoir

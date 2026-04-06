@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
   m_Name: JournalDistributriceBar
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 6
+  Id: 4
   ItemSprite: {fileID: -1179872504791405782, guid: 647039981ba907043a39e2cac3e84d3d, type: 3}
   Description: Journal d'aujourd'hui
   ExtraInformation: "\xCAtes-vous fatigu\xE9 d'habiter dans un immeuble moche? Vous

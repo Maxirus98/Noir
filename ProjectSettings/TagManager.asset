@@ -7,6 +7,7 @@ TagManager:
   - Indice
   - DetectiveBoard
   - Keypad
+  - Header
   layers:
   - Default
   - TransparentFX
@@ -58,6 +59,9 @@ TagManager:
     locked: 0
   - name: Avant-Plan-Noir
     uniqueID: 763221341
+    locked: 0
+  - name: Keypad
+    uniqueID: 1962531165
     locked: 0
   m_RenderingLayers:
   - Default
