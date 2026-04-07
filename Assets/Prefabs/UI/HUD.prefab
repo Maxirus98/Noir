@@ -1244,7 +1244,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Clue Extra Information
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 14a931b8d8224204bb72d0d502dd6578, type: 2}
   m_sharedMaterial: {fileID: -3390403713236599061, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1272,9 +1272,9 @@ MonoBehaviour:
   m_fontSize: 25
   m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 25
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_margin: {x: 30.620483, y: 2, z: 8.341797, w: 2}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1259033653327953558
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Loupe (F)
+  m_text: Loupe
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2480d2d92e117894cbde76a93f08f6bc, type: 2}
   m_sharedMaterial: {fileID: -4576575892522080601, guid: 2480d2d92e117894cbde76a93f08f6bc, type: 2}
@@ -2345,7 +2345,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Clue Description
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d171f9b77515055498d076e3ac917cef, type: 2}
   m_sharedMaterial: {fileID: -3390403713236599061, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2412,7 +2412,7 @@ MonoBehaviour:
   m_margin: {x: 111.41406, y: 0, z: 5.7595215, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2862635330359931307
@@ -2482,8 +2482,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
-  m_sharedMaterial: {fileID: -3390403713236599061, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d171f9b77515055498d076e3ac917cef, type: 2}
+  m_sharedMaterial: {fileID: -345170611631644204, guid: d171f9b77515055498d076e3ac917cef, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2549,7 +2549,7 @@ MonoBehaviour:
   m_margin: {x: -1.0915527, y: 0, z: 0, w: -1.8231812}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3135193028016452519
@@ -2694,7 +2694,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Clue Extra Information
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 14a931b8d8224204bb72d0d502dd6578, type: 2}
   m_sharedMaterial: {fileID: -3390403713236599061, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2722,9 +2722,9 @@ MonoBehaviour:
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 25
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -2758,10 +2758,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 179.45439, y: 2, z: 119.88748, w: -68.43183}
+  m_margin: {x: 179.45439, y: 1.0776482, z: 229.8699, w: -107.820625}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3226076973839103682
@@ -5960,7 +5960,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d171f9b77515055498d076e3ac917cef, type: 2}
   m_sharedMaterial: {fileID: -3390403713236599061, guid: 8fe5ca54c26068d43a7a887bc630ed05, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6027,7 +6027,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8327607433734521489
