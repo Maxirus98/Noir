@@ -9,7 +9,10 @@ public class NoirMouvement : MonoBehaviour
 
     private Vector2 movement;
 
-    [SerializeField] private Animator anim;
+    [SerializeField] 
+    private Animator anim;
+    public GameObject menu;
+
     
 
     public void OnMove(InputAction.CallbackContext context)
@@ -27,6 +30,14 @@ public class NoirMouvement : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * movement.x * speed * Time.deltaTime);
+
+        
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                menu.SetActive(true);
+               
+            }
+
 
     }
 
@@ -56,4 +67,6 @@ public class NoirMouvement : MonoBehaviour
             transform.localScale = new Vector3(-0.21f, 0.21f, 1f);
         }
     }
+
+   
 }
