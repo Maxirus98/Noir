@@ -12,7 +12,7 @@ public static class BoldHierarchyObjects
 
     private static void OnHierarchyGUI(int instanceID, Rect selectionRect)
     {
-        GameObject obj = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
+        GameObject obj = EditorUtility.EntityIdToObject(instanceID) as GameObject;
         if (obj == null) return;
 
         Color color;

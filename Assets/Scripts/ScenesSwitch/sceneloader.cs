@@ -5,7 +5,6 @@ public class sceneloader : MonoBehaviour
 {
     public static sceneloader instance;
     public GameObject player;
-    public Camera mainCamera;
     public Canvas ui;
 
     public Vector3 spawnPosition;
@@ -17,13 +16,13 @@ public class sceneloader : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(player);
-            DontDestroyOnLoad(mainCamera.gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
     }
+
     public void LoadScene(string sceneName,Vector3 newSpawnPosition) 
     {
         spawnPosition = newSpawnPosition;
