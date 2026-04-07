@@ -18,7 +18,6 @@ public class sceneloader : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(player);
             DontDestroyOnLoad(mainCamera.gameObject);
-            DontDestroyOnLoad(ui);
         }
         else
         {
@@ -37,14 +36,6 @@ public class sceneloader : MonoBehaviour
     {
         // Move player
         player.transform.position = spawnPosition;
-
-        // Reattach camera to player
-        mainCamera.transform.position = new Vector3(
-            player.transform.position.x,
-            player.transform.position.y,
-            mainCamera.transform.position.z
-        );
-
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

@@ -11,6 +11,7 @@ public class LightBlink : MonoBehaviour
     public float dashTime = 1f;
     public float pauseTime = 0.4f;
 
+    public float pauseBeforeRepeating;
     void Start()
     {
         StartCoroutine(PlayMorse());
@@ -36,7 +37,7 @@ public class LightBlink : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(3f); // pause before repeating
+            yield return new WaitForSeconds(pauseBeforeRepeating); // pause before repeating
         }
     }
 

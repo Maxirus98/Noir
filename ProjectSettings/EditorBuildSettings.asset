@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JimmyScenes/LabTest.unity
     guid: de8a250b10d2aaa44af3c241374a7b4d
+  - enabled: 1
+    path: Assets/Scenes/MaximeScenes/BureauPlaytest.unity
+    guid: 0f41f77d178eabc49b37a958bc532ee4
+  - enabled: 1
+    path: Assets/Scenes/MaximeScenes/RuePlaytest.unity
+    guid: 64541420d7d5dbe4e9675dee964480a2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

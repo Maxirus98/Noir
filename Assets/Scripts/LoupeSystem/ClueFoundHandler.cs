@@ -25,6 +25,9 @@ public class ClueFoundHandler : MonoBehaviour
         Destroy(gameObject, fadeOutAnimation.length);
     }
 
+    /// <summary>
+    /// When destroyed, assign the indice data passed to the note ui manager and open it.
+    /// </summary>
     private void OnDestroy()
     {
         NoteUiManager.SetNoteData(indiceData);

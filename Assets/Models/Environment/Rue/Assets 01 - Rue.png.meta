@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 647039981ba907043a39e2cac3e84d3d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1769214707790976924
+    second: Assets 01 - Rue_0
+  - first:
+      213: 4036842767456947706
+    second: Assets 01 - Rue_1
+  - first:
+      213: -1058897563953049536
+    second: Assets 01 - Rue_2
+  - first:
+      213: 7848121244570803319
+    second: Assets 01 - Rue_3
+  - first:
+      213: -1179872504791405782
+    second: Assets 01 - Rue_4
+  - first:
+      213: -3253881716625673145
+    second: Assets 01 - Rue_5
+  - first:
+      213: -4543216482208450230
+    second: Assets 01 - Rue_6
+  - first:
+      213: 4472435605925569965
+    second: Assets 01 - Rue_7
+  - first:
+      213: -6496849417444937021
+    second: Assets 01 - Rue_8
+  - first:
+      213: 8371939800614179572
+    second: Assets 01 - Rue_9
+  - first:
+      213: 8788496460594241240
+    second: Assets 01 - Rue_10
+  - first:
+      213: -818336502407876632
+    second: Assets 01 - Rue_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Assets 01 - Rue_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1001
+        width: 376
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468e8b2d89c7277e0800000000000000
+      internalID: -1769214707790976924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_1
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1001
+        width: 377
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd4060eb1fb50830800000000000000
+      internalID: 4036842767456947706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_2
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1063
+        width: 220
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0405d0f964a0e41f0800000000000000
+      internalID: -1058897563953049536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_3
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 1064
+        width: 218
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77cd6d8d0b02aec60800000000000000
+      internalID: 7848121244570803319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_4
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 705
+        width: 124
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b68a7453040afe0800000000000000
+      internalID: -1179872504791405782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_5
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 761
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744736b81d3e7d2d0800000000000000
+      internalID: -3253881716625673145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_6
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 770
+        width: 225
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49f3403ea043f0c0800000000000000
+      internalID: -4543216482208450230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_7
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 770
+        width: 100
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5a004dc78411e30800000000000000
+      internalID: 4472435605925569965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 79
+        width: 205
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2bdf960ed86d5a0800000000000000
+      internalID: -6496849417444937021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_9
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 79
+        width: 205
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2109864ea1f2470800000000000000
+      internalID: 8371939800614179572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_10
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 89
+        width: 261
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de5f7ba7f207f970800000000000000
+      internalID: 8788496460594241240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Rue_11
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 89
+        width: 260
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef2e3b694fa4a4f0800000000000000
+      internalID: -818336502407876632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Assets 01 - Rue_0: -1769214707790976924
+      Assets 01 - Rue_1: 4036842767456947706
+      Assets 01 - Rue_10: 8788496460594241240
+      Assets 01 - Rue_11: -818336502407876632
+      Assets 01 - Rue_2: -1058897563953049536
+      Assets 01 - Rue_3: 7848121244570803319
+      Assets 01 - Rue_4: -1179872504791405782
+      Assets 01 - Rue_5: -3253881716625673145
+      Assets 01 - Rue_6: -4543216482208450230
+      Assets 01 - Rue_7: 4472435605925569965
+      Assets 01 - Rue_8: -6496849417444937021
+      Assets 01 - Rue_9: 8371939800614179572
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

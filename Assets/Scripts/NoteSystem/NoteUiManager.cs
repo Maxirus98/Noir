@@ -17,24 +17,21 @@ public class NoteUiManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) { 
+        if (Instance != null) {
+            Destroy(this);
             Debug.Log("Can't have more instance for script" +  Instance.name);
         } else
         {
             Instance = this;
         }
+
+        DontDestroyOnLoad(this);
     }
 
     private void Start()
     {
         noteUi = transform.GetChild(0).gameObject;
         noteAnimator = GetComponentInChildren<Animator>(true);
-    }
-
-    //On notepad button in hud
-    public void OnNotepadOpen()
-    {
-        newNoteBadge.SetActive(false);
     }
 
     public void CloseNote()
@@ -48,6 +45,14 @@ public class NoteUiManager : MonoBehaviour
         noteUi.SetActive(!noteUi.activeInHierarchy);
     }
 
+    /// <summary>
+    /// Updates the note UI with the description, extra information, and item sprite from the specified indice data.
+    /// </summary>
+    /// <remarks>This method replaces the current contents of the note UI with the values from the provided
+    /// indice data. The method assumes that the note UI contains the required text and image components in the expected
+    /// order.</remarks>
+    /// <param name="indiceData">The data object containing the description, extra information, and item sprite to display in the note UI. Cannot
+    /// be null.</param>
     public static void SetNoteData(IndiceData indiceData)
     {
         var texts = noteUi.GetComponentsInChildren<TextMeshProUGUI>(true);

@@ -1,5 +1,3 @@
-using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -20,26 +18,13 @@ public class NoirMouvement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
+        Vector3 localScale = transform.localScale;
 
-        if (movement.x < 0) // A pressed
-        {
-            transform.localScale = new Vector3(-0.21f, transform.localScale.y, transform.localScale.z);
-        }
+        // Flip character according to facing direction and movement direction
+        localScale.x *= movement.x * transform.localScale.x >= 0 ? 1 : -1;
+        transform.localScale = localScale;
 
-        if (movement.x > 0) // D pressed
-        {
-            transform.localScale = new Vector3(0.21f, transform.localScale.y, transform.localScale.z);
-        }
-
-        if (movement.magnitude != 0)
-        {
-            anim.SetFloat("Movement", speed, 0.1f, Time.deltaTime);
-        }
-        else 
-        {
-            anim.SetFloat("Movement", 0);
-        }
-
+        anim.SetFloat("Movement", movement.magnitude);
     }
 
     void Update()

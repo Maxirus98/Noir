@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 41b9b5f684ac1a547b65c19a82add506
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1383203183981471192
+    second: Assets 01 - Bureau_0
+  - first:
+      213: -4673912686429375588
+    second: Assets 01 - Bureau_1
+  - first:
+      213: -1668679959811392124
+    second: Assets 01 - Bureau_2
+  - first:
+      213: -6579535403300749150
+    second: Assets 01 - Bureau_3
+  - first:
+      213: 1869286173372756791
+    second: Assets 01 - Bureau_4
+  - first:
+      213: 8838504036848560447
+    second: Assets 01 - Bureau_5
+  - first:
+      213: -5260358011796555264
+    second: Assets 01 - Bureau_6
+  - first:
+      213: -4372970215576713719
+    second: Assets 01 - Bureau_7
+  - first:
+      213: -2688245903628391645
+    second: Assets 01 - Bureau_8
+  - first:
+      213: -7253091769646405330
+    second: Assets 01 - Bureau_9
+  - first:
+      213: 1155763168587583103
+    second: Assets 01 - Bureau_10
+  - first:
+      213: -427018331184336506
+    second: Assets 01 - Bureau_11
+  - first:
+      213: 8152595807589641032
+    second: Assets 01 - Bureau_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2275
+        width: 311
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a589e5800edcce0800000000000000
+      internalID: -1383203183981471192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2249
+        width: 332
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c937f26dc2de22fb0800000000000000
+      internalID: -4673912686429375588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_2
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 2336
+        width: 98
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48df0a7ea68a7d8e0800000000000000
+      internalID: -1668679959811392124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_3
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 2008
+        width: 438
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0072b196bc0b4a0800000000000000
+      internalID: -6579535403300749150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_4
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 1442
+        width: 2065
+        height: 1299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733be6beed901f910800000000000000
+      internalID: 1869286173372756791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_5
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1816
+        width: 746
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39e636d79ca8aa70800000000000000
+      internalID: 8838504036848560447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_6
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1679
+        width: 481
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a7c7342447ff6b0800000000000000
+      internalID: -5260358011796555264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1520
+        width: 294
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906cf2702c61053c0800000000000000
+      internalID: -4372970215576713719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_8
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1549
+        width: 185
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ba455f79e61bad0800000000000000
+      internalID: -2688245903628391645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_9
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1667
+        width: 120
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29aaeac677d75b90800000000000000
+      internalID: -7253091769646405330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_10
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1549
+        width: 98
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e84247a781a0010800000000000000
+      internalID: 1155763168587583103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_11
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 272
+        width: 1278
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6817d29171de21af0800000000000000
+      internalID: -427018331184336506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bureau_12
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 46
+        width: 2065
+        height: 1298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b28b451b6d32170800000000000000
+      internalID: 8152595807589641032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Assets 01 - Bureau_0: -1383203183981471192
+      Assets 01 - Bureau_1: -4673912686429375588
+      Assets 01 - Bureau_10: 1155763168587583103
+      Assets 01 - Bureau_11: -427018331184336506
+      Assets 01 - Bureau_12: 8152595807589641032
+      Assets 01 - Bureau_2: -1668679959811392124
+      Assets 01 - Bureau_3: -6579535403300749150
+      Assets 01 - Bureau_4: 1869286173372756791
+      Assets 01 - Bureau_5: 8838504036848560447
+      Assets 01 - Bureau_6: -5260358011796555264
+      Assets 01 - Bureau_7: -4372970215576713719
+      Assets 01 - Bureau_8: -2688245903628391645
+      Assets 01 - Bureau_9: -7253091769646405330
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

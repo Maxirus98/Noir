@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Indice
+  - DetectiveBoard
   - Keypad
+  - Header
   layers:
   - Default
   - TransparentFX
@@ -40,11 +42,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Arriere-Plan
+    uniqueID: 3413416817
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: ClueFound
     uniqueID: 1539499875
+    locked: 0
+  - name: Noir
+    uniqueID: 1887001179
+    locked: 0
+  - name: Avant-Plan-Color
+    uniqueID: 3179967403
+    locked: 0
+  - name: Avant-Plan-Noir
+    uniqueID: 763221341
+    locked: 0
+  - name: Keypad
+    uniqueID: 1962531165
     locked: 0
   m_RenderingLayers:
   - Default

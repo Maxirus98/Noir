@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
+  m_Name: JournalDistributrice
+  m_EditorClassIdentifier: Assembly-CSharp::IndiceData
+  Id: 4
+  ItemSprite: {fileID: 21300000, guid: 06ee10af6f065b849b58ff8c678cc57f, type: 2}
+  Description: Journal d'aujourd'hui
+  ExtraInformation: "\xCAtes-vous fatigu\xE9 d'habiter dans un immeuble moche? Vous
+    n'\xEAtes pas un vrai criminel sans \xE9l\xE9gance! Avec nos nouveaux balcons,
+    faites rayonner votre vu sur le quartier. M\xEAme votre prochaine victime sera
+    amadou\xE9e!"
+  CanHelpToSolve: 0
+  InvestigationSlotType: 0
