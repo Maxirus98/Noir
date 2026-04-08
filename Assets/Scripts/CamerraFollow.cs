@@ -3,17 +3,16 @@ using UnityEngine;
 public class CamerraFollow : MonoBehaviour
 {
     private Transform target;
-     private  Vector3 velocity = Vector3.zero;
+    private  Vector3 velocity = Vector3.zero;
 
-      [Range(0, 1)]
-        public float followSpeed;
-
-       public Vector3 positionCamera;
+    [Range(0, 1)]
+    public float followSpeed;
+    public Vector3 positionCamera;
 
     private void Start()
     {
-           target = GameObject.FindGameObjectWithTag("Player").transform;
-
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        transform.position = new Vector3(target.position.x, 0, -10f);
     }
 
     private void LateUpdate()
@@ -23,10 +22,11 @@ public class CamerraFollow : MonoBehaviour
         Vector3 desiredPosition = new Vector3(
             target.position.x, target.position.y,
             transform.position.z) + positionCamera;
-            
-        ;
 
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+        if((desiredPosition - transform.position).sqrMagnitude > 0.1f)
+        {
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+        }
     }
 }
 

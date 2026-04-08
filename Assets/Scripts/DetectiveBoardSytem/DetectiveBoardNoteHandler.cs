@@ -48,7 +48,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     public void RemoveBoardNoteAt(int transformSiblingIndex)
     {
         // Prevent removing if solution is complete
-        if (boardNotes.Count >= NOTES_COUNT_NEEDED_TO_SOLVE) return;
+        if (notesAdded.Count >= NOTES_COUNT_NEEDED_TO_SOLVE) return;
         // Make the note at the clicked index null in the notesAdded List
         notesAdded[transformSiblingIndex - NUMBER_OF_SIBLINGS_BEFORE_NOTES_GO] = null;
         // Deactivate the board Note at the clicked index

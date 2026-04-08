@@ -48,17 +48,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: ClueFound
-    uniqueID: 1539499875
-    locked: 0
   - name: Noir
     uniqueID: 1887001179
+    locked: 0
+  - name: Interact
+    uniqueID: 2791180755
     locked: 0
   - name: Avant-Plan-Color
     uniqueID: 3179967403
     locked: 0
   - name: Avant-Plan-Noir
     uniqueID: 763221341
+    locked: 0
+  - name: ClueFound
+    uniqueID: 1539499875
     locked: 0
   - name: Keypad
     uniqueID: 1962531165

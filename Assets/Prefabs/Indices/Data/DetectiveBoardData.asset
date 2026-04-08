@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
-  m_Name: DossierData
+  m_Name: DetectiveBoardData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 2
-  ItemSprite: {fileID: -4218905753032761122, guid: 68ba367f4c8c2f944b81a4ba85fbcdef, type: 3}
-  Description: "Dossier D\xE9tectus"
-  ExtraInformation: "Un dossier qui appartient \xE0 l'ancienne d\xE9tectus sur cette
-    enqu\xEAte. Il me semble qu' elle soit devenue barmaid."
+  Id: 10
+  ItemSprite: {fileID: 21300000, guid: d8f9e46a4449f004ca56ab840e5a498a, type: 2}
+  Description: "R\xE9soudre une enqu\xEAte"
+  ExtraInformation: "Trouve: l'arme du crime, la victime, le coupable, la raison
+    et l'heure du d\xE9c\xE8s.\n"
   CanHelpToSolve: 0
   InvestigationSlotType: 0
