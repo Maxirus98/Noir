@@ -45,3 +45,19 @@ MonoBehaviour:
     loop: 0
     randomizePitch: 0
     pitchRange: 0
+  - id: SFX_ClueNearby
+    clip: {fileID: 8300000, guid: 140b8a74bdaaa7d4db483a9bbd84c0e1, type: 3}
+    type: 1
+    volume: 1
+    pitch: 1
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_ClueFound
+    clip: {fileID: 8300000, guid: 140b8a74bdaaa7d4db483a9bbd84c0e1, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
