@@ -2446,7 +2446,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7899121643290921242, guid: c10ed14a5e9fcda41a758df408c6cc75, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.59119487, g: 0.58933574, b: 0.58933574, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Indice
   <data>k__BackingField: {fileID: 11400000, guid: 8dc47e6ee38f3ad4b8860923d54e581f, type: 2}
-  <clueFoundScale>k__BackingField: 0.05
+  <clueFoundScale>k__BackingField: 0.03
   <clueFound>k__BackingField: 0
 --- !u!1 &1164838276
 GameObject:
