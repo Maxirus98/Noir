@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 1a6be50f23b25ab41a75abae94c8e2e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8414823443302715599
+    second: Assets 01 - Bar_0
+  - first:
+      213: 6453736639019488493
+    second: Assets 01 - Bar_1
+  - first:
+      213: -2562864514232952770
+    second: Assets 01 - Bar_2
+  - first:
+      213: 6820408785981355705
+    second: Assets 01 - Bar_3
+  - first:
+      213: -5130998342542337556
+    second: Assets 01 - Bar_4
+  - first:
+      213: 500117178076965338
+    second: Assets 01 - Bar_5
+  - first:
+      213: 7545382410403389647
+    second: Assets 01 - Bar_6
+  - first:
+      213: -8861424975840913240
+    second: Assets 01 - Bar_7
+  - first:
+      213: -1855960824160749528
+    second: Assets 01 - Bar_8
+  - first:
+      213: -5758056636871272439
+    second: Assets 01 - Bar_9
+  - first:
+      213: -194139446228650392
+    second: Assets 01 - Bar_10
+  - first:
+      213: -2316128164751840867
+    second: Assets 01 - Bar_11
+  - first:
+      213: -1039614029652458783
+    second: Assets 01 - Bar_12
+  - first:
+      213: -3280909000823964687
+    second: Assets 01 - Bar_13
+  - first:
+      213: 7591593642418096561
+    second: Assets 01 - Bar_14
+  - first:
+      213: 79565242911323692
+    second: Assets 01 - Bar_15
+  - first:
+      213: -145275974913093120
+    second: Assets 01 - Bar_16
+  - first:
+      213: -8156405178969396362
+    second: Assets 01 - Bar_17
+  - first:
+      213: -1118495033085148756
+    second: Assets 01 - Bar_18
+  - first:
+      213: 5947047746637543181
+    second: Assets 01 - Bar_19
+  - first:
+      213: 6417473856140146562
+    second: Assets 01 - Bar_20
+  - first:
+      213: 7010240712947057783
+    second: Assets 01 - Bar_21
+  - first:
+      213: 8993743756855927826
+    second: Assets 01 - Bar_22
+  - first:
+      213: 3472580483634669757
+    second: Assets 01 - Bar_23
+  - first:
+      213: 4721003172753147697
+    second: Assets 01 - Bar_24
+  - first:
+      213: 6352256126302411338
+    second: Assets 01 - Bar_25
+  - first:
+      213: -6422769761545787604
+    second: Assets 01 - Bar_26
+  - first:
+      213: 7297390355221529768
+    second: Assets 01 - Bar_27
+  - first:
+      213: -3998774469465842345
+    second: Assets 01 - Bar_28
+  - first:
+      213: 2201613142528057783
+    second: Assets 01 - Bar_29
+  - first:
+      213: 1425841033746406058
+    second: Assets 01 - Bar_30
+  - first:
+      213: -8044396042863626239
+    second: Assets 01 - Bar_31
+  - first:
+      213: -6403649585001790266
+    second: Assets 01 - Bar_32
+  - first:
+      213: -7022869978026962281
+    second: Assets 01 - Bar_33
+  - first:
+      213: -1188750069462788958
+    second: Assets 01 - Bar_34
+  - first:
+      213: -2840469959097394491
+    second: Assets 01 - Bar_35
+  - first:
+      213: 5811692142304208561
+    second: Assets 01 - Bar_36
+  - first:
+      213: 6502663512244542318
+    second: Assets 01 - Bar_37
+  - first:
+      213: -6398889535087827362
+    second: Assets 01 - Bar_38
+  - first:
+      213: 8432384236563192706
+    second: Assets 01 - Bar_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Assets 01 - Bar_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1119
+        width: 270
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fef4679aa883b80800000000000000
+      internalID: -8414823443302715599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1128
+        width: 308
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de41ea2a747409950800000000000000
+      internalID: 6453736639019488493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_2
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 543
+        width: 403
+        height: 716
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e38d0bd8d40ee6cd0800000000000000
+      internalID: -2562864514232952770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 597
+        width: 277
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b63f5f97a5f6ae50800000000000000
+      internalID: 6820408785981355705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_4
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 597
+        width: 277
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce955a151380bc8b0800000000000000
+      internalID: -5130998342542337556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_5
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 854
+        width: 95
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad929597ce5c0f600800000000000000
+      internalID: 500117178076965338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_6
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 716
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0239a335596b860800000000000000
+      internalID: 7545382410403389647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_7
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 643
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a85a3f2fe4e50580800000000000000
+      internalID: -8861424975840913240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets 01 - Bar_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 105
+        width: 1680
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8287bd6b67d4e36e0800000000000000
+      internalID: -1855960824160749528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4967a88779bf273418c5434c5092b5fa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Assets 01 - Bar_0: -8414823443302715599
+      Assets 01 - Bar_1: 6453736639019488493
+      Assets 01 - Bar_10: -194139446228650392
+      Assets 01 - Bar_11: -2316128164751840867
+      Assets 01 - Bar_12: -1039614029652458783
+      Assets 01 - Bar_13: -3280909000823964687
+      Assets 01 - Bar_14: 7591593642418096561
+      Assets 01 - Bar_15: 79565242911323692
+      Assets 01 - Bar_16: -145275974913093120
+      Assets 01 - Bar_17: -8156405178969396362
+      Assets 01 - Bar_18: -1118495033085148756
+      Assets 01 - Bar_19: 5947047746637543181
+      Assets 01 - Bar_2: -2562864514232952770
+      Assets 01 - Bar_20: 6417473856140146562
+      Assets 01 - Bar_21: 7010240712947057783
+      Assets 01 - Bar_22: 8993743756855927826
+      Assets 01 - Bar_23: 3472580483634669757
+      Assets 01 - Bar_24: 4721003172753147697
+      Assets 01 - Bar_25: 6352256126302411338
+      Assets 01 - Bar_26: -6422769761545787604
+      Assets 01 - Bar_27: 7297390355221529768
+      Assets 01 - Bar_28: -3998774469465842345
+      Assets 01 - Bar_29: 2201613142528057783
+      Assets 01 - Bar_3: 6820408785981355705
+      Assets 01 - Bar_30: 1425841033746406058
+      Assets 01 - Bar_31: -8044396042863626239
+      Assets 01 - Bar_32: -6403649585001790266
+      Assets 01 - Bar_33: -7022869978026962281
+      Assets 01 - Bar_34: -1188750069462788958
+      Assets 01 - Bar_35: -2840469959097394491
+      Assets 01 - Bar_36: 5811692142304208561
+      Assets 01 - Bar_37: 6502663512244542318
+      Assets 01 - Bar_38: -6398889535087827362
+      Assets 01 - Bar_39: 8432384236563192706
+      Assets 01 - Bar_4: -5130998342542337556
+      Assets 01 - Bar_5: 500117178076965338
+      Assets 01 - Bar_6: 7545382410403389647
+      Assets 01 - Bar_7: -8861424975840913240
+      Assets 01 - Bar_8: -1855960824160749528
+      Assets 01 - Bar_9: -5758056636871272439
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

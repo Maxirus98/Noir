@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
+  m_Name: DetectiveBoardData
+  m_EditorClassIdentifier: Assembly-CSharp::IndiceData
+  Id: 10
+  ItemSprite: {fileID: 21300000, guid: d8f9e46a4449f004ca56ab840e5a498a, type: 2}
+  Description: "R\xE9soudre une enqu\xEAte"
+  ExtraInformation: "Trouve: l'arme du crime, la victime, le coupable, la raison
+    et l'heure du d\xE9c\xE8s.\n"
+  CanHelpToSolve: 0
+  InvestigationSlotType: 0

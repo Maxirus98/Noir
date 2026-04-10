@@ -45,27 +45,19 @@ MonoBehaviour:
     loop: 0
     randomizePitch: 0
     pitchRange: 0
-  - id: SFX_Correct
-    clip: {fileID: 8300000, guid: 99e2caa7e487a9645b69f4053e3fca71, type: 3}
+  - id: SFX_ClueNearby
+    clip: {fileID: 8300000, guid: 140b8a74bdaaa7d4db483a9bbd84c0e1, type: 3}
     type: 1
-    volume: 0.387
+    volume: 1
     pitch: 1
     loop: 0
     randomizePitch: 0
     pitchRange: 0
-  - id: SFX_Fail
-    clip: {fileID: 8300000, guid: 81114a0214212834ca94f7d5fd1fa7f6, type: 3}
+  - id: SFX_ClueFound
+    clip: {fileID: 8300000, guid: 140b8a74bdaaa7d4db483a9bbd84c0e1, type: 3}
     type: 1
-    volume: 0.329
-    pitch: 1
-    loop: 0
-    randomizePitch: 0
-    pitchRange: 0
-  - id: SFX_Winner
-    clip: {fileID: 8300000, guid: 01133c69fb725b444a12abc0bcefdfe7, type: 3}
-    type: 1
-    volume: 0.315
-    pitch: 1
+    volume: 1
+    pitch: 2
     loop: 0
     randomizePitch: 0
     pitchRange: 0

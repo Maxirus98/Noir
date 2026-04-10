@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class LoupeInteractionHandler : MonoBehaviour
 {
+    private const float INSPECTION_DURATION = 1f;
     [SerializeField]
     private GameObject clueFound;
     private GameObject clueFoundInstance;
@@ -13,6 +14,7 @@ public class LoupeInteractionHandler : MonoBehaviour
     private float timeInspecting;
     private bool finishInspecting;
 
+    private AudioManager audioManager;
     private void OnEnable()
     {
         Cursor.visible = false;
@@ -24,6 +26,7 @@ public class LoupeInteractionHandler : MonoBehaviour
         loupeInspectAction = InputSystem.actions.FindAction("Inspect");
         mouseAction = InputSystem.actions.FindAction("Mouse");
         loupeSliderInstance = transform.Find("LoupeSlider").gameObject;
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -53,12 +56,23 @@ public class LoupeInteractionHandler : MonoBehaviour
     private void InspectLoupeArea()
     {
         timeInspecting += Time.deltaTime;
-        timeInspecting = Mathf.Min(timeInspecting, 1f);
-        finishInspecting = timeInspecting >= 1f;
+        timeInspecting = Mathf.Min(timeInspecting, INSPECTION_DURATION);
+        finishInspecting = timeInspecting >= INSPECTION_DURATION;
         var sliderSR = loupeSliderInstance.GetComponent<SpriteRenderer>();
 
         // Manage custom shader circular slider
         sliderSR.material.SetFloat("_Frac", timeInspecting);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Indice indice;
+        var isOverIndice = collision.TryGetComponent<Indice>(out indice);
+        if (isOverIndice && !indice.clueFound)
+        {
+            // Play sound to indicate player is close to indice
+            audioManager.PlaySound("SFX_ClueNearby");
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -92,6 +106,9 @@ public class LoupeInteractionHandler : MonoBehaviour
 
             // Indice clueFound prevents you form always finding the same indice.
             indice.clueFound = true;
+
+            // Play clue found sound
+            audioManager.PlaySound("SFX_ClueFound");
         }
     }
 
