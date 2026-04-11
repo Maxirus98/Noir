@@ -23,6 +23,6 @@ MonoBehaviour:
     text: "Je vous ai d\xE9j\xE0 parl\xE9 d\xE9tective."
     typingSpeed: 0.05
   - speaker: Noir
-    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
+    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
     text: Je dois chercher les 3 vol...
     typingSpeed: 0.05

@@ -18,27 +18,36 @@ public class DialogueManager : MonoBehaviour
 
     public bool IsDialogueActive { get; set; }
 
-    void Awake()
+    private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void StartDialogue(DialogueData dialogue)
     {
         // Disable input noir 
-        FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = false;
+        InputManager.Instance.DisablePlayerMovement();
 
         // Vérifier les conditions
         if (dialogue.requiredFlags != null)
         {
-            foreach (string flag in dialogue.requiredFlags)
-            {
-                if (!ProgressionManager.Instance.HasFlag(flag))
-                {
-                    Debug.Log("Dialogue locked. Missing flag: " + flag);
-                    return;
-                }
-            }
+            //foreach (string flag in dialogue.requiredFlags)
+            //{
+            //    if (!ProgressionManager.Instance.HasFlag(flag))
+            //    {
+            //        Debug.Log("Dialogue locked. Missing flag: " + flag);
+            //        return;
+            //    }
+            //}
+            if (!ProgressionManager.Instance.HasAllFlags(dialogue.requiredFlags))
+                return;
         }
 
         currentDialogue = dialogue; // set indice data
@@ -65,6 +74,8 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
+
+
 
     public void DisplayNextLine()
     {
@@ -112,10 +123,10 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("Indice saved: " + currentDialogue.indiceData.name);
         }
 
-        currentDialogue = null; 
+        currentDialogue = null;
 
         // Réactiver input
-        FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = true;
+        InputManager.Instance.EnablePlayerMovement();
     }
 
     public void ResetDialogue()

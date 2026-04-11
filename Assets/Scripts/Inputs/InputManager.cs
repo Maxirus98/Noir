@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 
@@ -66,11 +67,13 @@ public class InputManager : MonoBehaviour
 
     public void DisablePlayerMovement()
     {
+        FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = false;
         Inputs.Player.Move.Disable();
     }
 
     public void EnablePlayerMovement()
     {
+        FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = true;
         Inputs.Player.Move.Enable();
     }
 

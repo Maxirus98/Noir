@@ -1,6 +1,6 @@
 using UnityEngine.InputSystem;
 
-public class NPCInteraction : Interaction
+public class NPCInteraction : DialogueInteraction
 {
     void Update()
     {
@@ -21,6 +21,8 @@ public class NPCInteraction : Interaction
 
     protected override void OnPlayerExit()
     {
+        base.OnPlayerExit();
+
         if (DialogueManager.Instance == null) return;
 
         DialogueManager.Instance.IsDialogueActive = false;

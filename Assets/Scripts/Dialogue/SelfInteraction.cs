@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SelfInteraction : Interaction
+public class SelfInteraction : DialogueInteraction
 {
     [SerializeField] private bool triggered = false;
 
@@ -15,16 +15,11 @@ public class SelfInteraction : Interaction
         }
     }
 
-
     protected override void OnPlayerEnter()
     {
         if (triggered) return;
 
         triggered = true;
-
         StartDialogue();
-
     }
-
-
 }

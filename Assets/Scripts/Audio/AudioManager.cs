@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -147,6 +148,18 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+    private bool hasWrap;
+    private void Update()
+    {
+        // DEBUG: passer l'objectif avec 0
+        if (UnityEngine.InputSystem.Keyboard.current != null &&
+            UnityEngine.InputSystem.Keyboard.current.digit0Key.wasPressedThisFrame &&
+            !hasWrap)
+        {
+            hasWrap = true;
+            SceneManager.LoadScene("Puzzle2-1");
+        }
     }
 
 

@@ -158,6 +158,7 @@ public class Puzzle2Manager : MonoBehaviour
         {
             AudioManager.Instance.PlaySound(failSound);
             stage = 0;
+            UpdateStageUI();
             ShowDialogue("N'oublie pas de suivre l'ordre en trouvant 3 éléments");
             Shuffle();
             return;
@@ -181,7 +182,8 @@ public class Puzzle2Manager : MonoBehaviour
         {
             AudioManager.Instance.PlaySound(completeSound);
             ShowDialogue("Te voici fugitif !");
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); 
+            GameEvents.OnPuzzle2Completed?.Invoke("Puzzle2"); // subscrition in PuzzleInteraction
             return;
         }
         else
