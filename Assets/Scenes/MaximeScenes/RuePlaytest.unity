@@ -2133,7 +2133,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764649019}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2170,7 +2170,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.55, y: 9.97}
+  m_Size: {x: 5.55, y: 11.56}
   m_EdgeRadius: 0
 --- !u!114 &764649023
 MonoBehaviour:
@@ -2184,8 +2184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a003421180b12184c828c04ab9df3171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BureauRue
-  levelName: 
-  spawnPosition: {x: -5.34, y: -5.04, z: 0}
+  levelName: Laboratoire
+  spawnPosition: {x: 6.2, y: -2.8, z: 0}
 --- !u!1 &799850738
 GameObject:
   m_ObjectHideFlags: 0
