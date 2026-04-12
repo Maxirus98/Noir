@@ -116,7 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a31665ba26c594f8af507942a5d95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 955d33486e8b67d4593d39d40df53b3b, type: 2}
+  overlay: {fileID: 3182461804938988551}
+  sceneText: {fileID: 1923169608353719943}
 --- !u!1 &2515760774982409034
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,8 +260,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BUREAU DETECTUS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 89c1a1f68c2470e41a327a9e949996f9, type: 2}
-  m_sharedMaterial: {fileID: 6029535166446042320, guid: 89c1a1f68c2470e41a327a9e949996f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 20f0cd1a2ab541a4186f2655e57d2b40, type: 2}
+  m_sharedMaterial: {fileID: -8857246297495761560, guid: 20f0cd1a2ab541a4186f2655e57d2b40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -290,7 +291,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

@@ -1,121 +1,9 @@
 using System.Collections;
+using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-
-//public class AudioManager : MonoBehaviour
-//{
-//    public static AudioManager Instance;
-
-//    [Header("Library")]
-//    [SerializeField] private AudioLibrarySO library;
-
-//    [Header("Mixers")]
-//    [SerializeField] private AudioMixerGroup musicMixer;
-//    [SerializeField] private AudioMixerGroup sfxMixer;
-//    [SerializeField] private AudioMixerGroup uiMixer;
-
-//    private AudioSource currentMusic;
-
-//    private void Awake()
-//    {
-//        if (Instance == null)
-//        {
-//            Instance = this;
-//            DontDestroyOnLoad(gameObject);
-//        }
-//        else
-//        {
-//            Destroy(gameObject);
-//        }
-//    }
-
-//    public void PlaySound(string soundId, Vector3? position = null)
-//    {
-//        SoundData sound = library.Get(soundId);
-
-//        if (sound == null || sound.clip == null)
-//        {
-//            Debug.LogWarning($"[AudioManager] Sound not found: {soundId}");
-//            return;
-//        }
-
-//        GameObject go = new($"Audio_{soundId}");
-
-//        if (position.HasValue) go.transform.position = position.Value;
-//        AudioSource source = go.AddComponent<AudioSource>();
-
-//        source.clip = sound.clip;
-//        source.volume = sound.volume;
-//        source.pitch = GetPitch(sound);
-//        source.loop = sound.loop;
-//        source.outputAudioMixerGroup = GetMixer(sound.type);
-
-//        //// Spatial logic for 3d or 2d games
-//        source.spatialBlend = position.HasValue ? 1f : 0f;
-
-//        source.Play();
-
-//        // Behaviors of different types of Audio played
-//        switch (sound.type)
-//        {
-//            case AudioType.Music:
-//                if (currentMusic != null)
-//                    currentMusic.Stop();
-//                currentMusic = source;
-//                break;
-
-//            case AudioType.SFX:
-//            case AudioType.UI:
-//                if (!sound.loop)
-//                    Destroy(go, source.clip.length);
-//                break;
-//        }
-//    }
-
-
-
-//    private float GetPitch(SoundData sound)
-//    {
-//        if (!sound.randomizePitch) return sound.pitch;
-//        float randomPitchRange = Random.Range(-sound.pitchRange, sound.pitchRange);
-//        return sound.pitch + randomPitchRange;
-//    }
-
-
-//    private AudioMixerGroup GetMixer(AudioType type)
-//    {
-//        //return type switch
-//        //{
-//        //    AudioType.Music => musicMixer,
-//        //    AudioType.SFX => sfxMixer,
-//        //    AudioType.UI => uiMixer,
-//        //};
-
-//        AudioMixerGroup mixerGroup = null;
-//        switch (type) 
-//        {
-//            case AudioType.Music:
-//                mixerGroup = musicMixer;
-//                break;
-//            case AudioType.SFX:
-//                mixerGroup = sfxMixer;
-//                break;
-
-//            case AudioType.UI:
-//                mixerGroup = uiMixer;
-//                break;
-//            default:
-//                break;
-//        }
-//        return mixerGroup;
-//    }
-
-
-
-
-//}
 
 
 public class AudioManager : MonoBehaviour
@@ -149,7 +37,9 @@ public class AudioManager : MonoBehaviour
         }
 
     }
+
     private bool hasWrap;
+    [SerializeField] private FadeTransition fadeTransition;
     private void Update()
     {
         // DEBUG: passer l'objectif avec 0
@@ -158,10 +48,18 @@ public class AudioManager : MonoBehaviour
             !hasWrap)
         {
             hasWrap = true;
-            SceneManager.LoadScene("Puzzle2-1");
+            TransitionManager.Instance.TransitionToScene("Puzzle2-1", fadeTransition, 1f);
+            hasWrap = false;
+        }
+        if (UnityEngine.InputSystem.Keyboard.current != null &&
+            UnityEngine.InputSystem.Keyboard.current.digit1Key.wasPressedThisFrame &&
+            !hasWrap)
+        {
+            hasWrap = true;
+            TransitionManager.Instance.TransitionToScene("Puzzle2", fadeTransition, 1f);
+            hasWrap = false;
         }
     }
-
 
     // MUSIC - PERSISTENT
     public void PlayMusic(string musicId)

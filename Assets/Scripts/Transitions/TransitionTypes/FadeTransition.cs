@@ -1,14 +1,31 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class FadeTransition : MonoBehaviour, ITransition
 {
     private CanvasGroup canvasGroup;
-    [SerializeField] private TransitionConfigSO config;
+
+    [SerializeField] private Image overlay;
+    [SerializeField] private TMP_Text sceneText;
+
+    private TransitionConfigSO config;
+
+    public void Init(TransitionConfigSO newConfig)
+    {
+        config = newConfig;
+
+        if (overlay != null)
+            overlay.color = config.overlayColor;
+
+        if (sceneText != null)
+            sceneText.text = config.displayName;
+    }
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject); // preservation between scenes 
+        DontDestroyOnLoad(gameObject);
 
         if (!canvasGroup)
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
@@ -33,7 +50,7 @@ public class FadeTransition : MonoBehaviour, ITransition
             .OnComplete(() =>
             {
                 canvasGroup.blocksRaycasts = false;
-                Destroy(gameObject); // destroys itself at the end of transition
+                Destroy(gameObject);
             });
     }
 }
