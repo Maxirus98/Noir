@@ -106,4 +106,12 @@ public static class NoteSaveManager
         var nw = GetSavedNotes();
         return nw.notes.FirstOrDefault(n => n.Id == id);
     }
+
+    /// <summary>
+    /// Method to delete the json files to reset the game. Is called OnApplicationQuit
+    /// </summary>
+    public static void DeleteAllNotes()
+    {
+        File.Delete(savePath);
+    }
 }

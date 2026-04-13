@@ -94,4 +94,12 @@ public class NotepadUiManager : MonoBehaviour
             noteExtraInfo.text = notes[currentIndex].ExtraInformation;
         }
     }
+
+    /// <summary>
+    /// Doesn't work on Web nor Mobile. TODO: TEST
+    /// </summary>
+    private void OnApplicationQuit()
+    {
+        NoteSaveManager.DeleteAllNotes();
+    }
 }
