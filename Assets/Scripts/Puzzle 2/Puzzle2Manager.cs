@@ -2,43 +2,61 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 
+// Create matched pair silhouette
+[System.Serializable]
+public class SilhouetteSpritePair
+{
+    public SilhouetteType type; // Silhouette enum key
+    public Sprite sprite; // Associated sprite
+}
+
 public class Puzzle2Manager : MonoBehaviour
 {
     [Header("Windows")]
-    [SerializeField] private List<WindowButton> windows; // All puzzle windows
+    [SerializeField] private List<WindowButton> windows; // All puzzle window buttons
 
     [Header("Sprites")]
-    [SerializeField] private Sprite windowSprite;
-    [SerializeField] private Sprite balconySprite;
-    [SerializeField] private Sprite curtainsSprite;
+    [SerializeField] private Sprite windowSprite; // Base window background
+    [SerializeField] private Sprite balconySprite; // Balcony visual
+    [SerializeField] private Sprite curtainsSprite; // Curtains visual
 
-    [SerializeField] private Sprite longCoatSprite;
-    [SerializeField] private Sprite thinSprite;
-    [SerializeField] private Sprite tallSprite;
-    [SerializeField] private Sprite smallSprite;
+    [Header("Silhouettes")]
+    [SerializeField] private List<SilhouetteSpritePair> silhouetteSprites; // Mapping type -> sprite
+
+    private Dictionary<SilhouetteType, Sprite> spriteMap; 
 
     [Header("Gameplay")]
-    [SerializeField] private SilhouetteType target = SilhouetteType.LongCoat; // Target silhouette to find
-    [SerializeField] private int minCorrectStart = 2; // Base number of valid windows
-    [SerializeField] private int maxStages = 3; // Total stages to complete
+    [SerializeField] private SilhouetteType target = SilhouetteType.LongCoat; // Correct silhouette
+    [SerializeField] private int maxStages = 3; // Total puzzle stages
+
+    [Header("Distribution")]
+    [SerializeField] private List<int> correctPerStage = new List<int>() { 3, 2, 1 }; // Correct count per stage
+    [SerializeField] private int fakeLongCoatCount = 2; // Fake target windows count
+    [SerializeField] private int noSilhouetteCount = 3; // Empty silhouette windows count
+    // The rest is random silhouettes
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI stageText; // Displays current stage
-    [SerializeField] private TextMeshProUGUI dialogueText; // Displays feedback messages
+    [SerializeField] private TextMeshProUGUI stageText; // Stage display text
+    [SerializeField] private TextMeshProUGUI dialogueText; // Feedback dialogue
 
     [Header("Audio")]
-    [SerializeField] private string successStepSound;
-    [SerializeField] private string failSound;
-    [SerializeField] private string completeSound;
+    [SerializeField] private string successStepSound; 
+    [SerializeField] private string failSound; 
+    [SerializeField] private string completeSound; 
 
-    private List<WindowButton> correct = new List<WindowButton>(); // All valid windows for current round
+    private List<WindowButton> correct = new List<WindowButton>(); // Valid windows cache
     private List<WindowButton> selected = new List<WindowButton>(); // Player selections
 
     private int stage = 0;
 
     void Start()
     {
-        // Initialize all windows with manager reference
+        // Build sprite dictionary 
+        spriteMap = new Dictionary<SilhouetteType, Sprite>();
+        foreach (var pair in silhouetteSprites)
+            spriteMap[pair.type] = pair.sprite;
+
+        // Init all windows 
         foreach (var window in windows)
             window.Init(this);
 
@@ -48,39 +66,76 @@ public class Puzzle2Manager : MonoBehaviour
 
     void Shuffle()
     {
-        // Reset state
+        // Reset round state
         correct.Clear();
         selected.Clear();
 
-        int minCorrect = minCorrectStart + stage; // Increase difficulty per stage
+        int correctCount = GetCorrectCountForStage();
 
-        // Randomize all windows
-        foreach (var window in windows)
-        {
-            WindowElement e = GetRandomElements();
-            SilhouetteType s = GetRandomSilhouette(e);
-
-            window.Setup(e, s);
-            ApplySprites(window);
-        }
-
-        // Force a minimum number of valid windows
+        // Shuffle window order for distribution
         List<WindowButton> shuffled = new List<WindowButton>(windows);
         ShuffleList(shuffled);
 
-        for (int i = 0; i < minCorrect && i < shuffled.Count; i++)
-        {
-            var window = shuffled[i];
+        int index = 0;
 
-            window.Setup(
+        // 1. Correct windows (full kit + target slhouette)
+        for (int i = 0; i < correctCount && index < shuffled.Count; i++, index++)
+        {
+            var w = shuffled[index];
+
+            w.Setup(
                 WindowElement.Balcony | WindowElement.Curtains | WindowElement.Silhouette,
                 target
             );
 
-            ApplySprites(window);
+            ApplySprites(w);
         }
 
-        // Cache valid windows for validation
+        // 2. Incorrect fake target (missing at least one element)
+        for (int i = 0; i < fakeLongCoatCount && index < shuffled.Count; i++, index++)
+        {
+            var w = shuffled[index];
+
+            WindowElement e = GetRandomElements() | WindowElement.Silhouette;
+
+            // Remove one element to invalidate
+            if (e.HasFlag(WindowElement.Balcony) && e.HasFlag(WindowElement.Curtains))
+            {
+                if (Random.value > 0.5f)
+                    e &= ~WindowElement.Balcony;
+                else
+                    e &= ~WindowElement.Curtains;
+            }
+
+            w.Setup(e, target);
+            ApplySprites(w);
+        }
+
+        // 3. Windows with no silhouette
+        for (int i = 0; i < noSilhouetteCount && index < shuffled.Count; i++, index++)
+        {
+            var w = shuffled[index];
+
+            WindowElement e = GetRandomElements();
+            e &= ~WindowElement.Silhouette;
+
+            w.Setup(e, SilhouetteType.None);
+            ApplySprites(w);
+        }
+
+        // 4. All the rest of windows -> random non-target silhouettes
+        for (; index < shuffled.Count; index++)
+        {
+            var w = shuffled[index];
+
+            WindowElement e = GetRandomElements() | WindowElement.Silhouette;
+            SilhouetteType s = GetRandomNonTargetSilhouette();
+
+            w.Setup(e, s);
+            ApplySprites(w);
+        }
+
+        // Cache valid windows for win condition
         foreach (var window in windows)
         {
             if (window.IsCorrect(target))
@@ -88,72 +143,79 @@ public class Puzzle2Manager : MonoBehaviour
         }
     }
 
+    int GetCorrectCountForStage()
+    {
+        // Get correct count safely per stage
+        if (correctPerStage == null || correctPerStage.Count == 0)
+            return 1;
+
+        int index = Mathf.Clamp(stage, 0, correctPerStage.Count - 1);
+        return correctPerStage[index];
+    }
+
     void ApplySprites(WindowButton window)
     {
-        // Always apply window background
+        // Apply base window background
         if (window.windowImage != null)
             window.windowImage.sprite = windowSprite;
 
-        // Apply correct sprite based on active elements
+        // Apply element visuals
         if (window.balconyImage.enabled)
             window.balconyImage.sprite = balconySprite;
 
         if (window.curtainsImage.enabled)
             window.curtainsImage.sprite = curtainsSprite;
 
+        // Apply silhouette sprite
         if (window.silhouetteImage.enabled)
             window.silhouetteImage.sprite = GetSilhouetteSprite(window.silhouette);
     }
 
     Sprite GetSilhouetteSprite(SilhouetteType type)
     {
-        // Return sprite matching silhouette type
-        switch (type)
-        {
-            case SilhouetteType.LongCoat: return longCoatSprite;
-            case SilhouetteType.Thin: return thinSprite;
-            case SilhouetteType.Tall: return tallSprite;
-            case SilhouetteType.Small: return smallSprite;
-        }
+        // Get sprite from dictionary safely
+        if (spriteMap.TryGetValue(type, out var sprite))
+            return sprite;
 
         return null;
     }
 
-    WindowElement GetRandomElements()
+    SilhouetteType GetRandomNonTargetSilhouette()
     {
-        // Random combination of elements using flags
-        WindowElement windowElement = WindowElement.None;
+        // Get all non-target silhouettes dynamically
+        List<SilhouetteType> types = new List<SilhouetteType>();
 
-        if (Random.value > 0.5f) windowElement |= WindowElement.Balcony;
-        if (Random.value > 0.5f) windowElement |= WindowElement.Curtains;
-        if (Random.value > 0.5f) windowElement |= WindowElement.Silhouette;
+        foreach (SilhouetteType type in System.Enum.GetValues(typeof(SilhouetteType)))
+        {
+            if (type != SilhouetteType.None && type != target)
+                types.Add(type);
+        }
 
-        return windowElement;
+        return types[Random.Range(0, types.Count)];
     }
 
-    SilhouetteType GetRandomSilhouette(WindowElement windowElement)
+    WindowElement GetRandomElements()
     {
-        // Only assign silhouette if window has one
-        if (!windowElement.HasFlag(WindowElement.Silhouette))
-            return SilhouetteType.None;
+        // Random combination using bit flags
+        WindowElement e = WindowElement.None;
 
-        // Increase variety as stages progress
-        int maxType = 2 + stage;
-        maxType = Mathf.Clamp(maxType, 2, 4);
+        if (Random.value > 0.5f) e |= WindowElement.Balcony;
+        if (Random.value > 0.5f) e |= WindowElement.Curtains;
+        if (Random.value > 0.5f) e |= WindowElement.Silhouette;
 
-        return (SilhouetteType)Random.Range(1, maxType + 1);
+        return e;
     }
 
     public void OnWindowClicked(WindowButton window)
     {
-        // Prevent double selection
+        // Prevent duplicate clicks
         if (selected.Contains(window))
             return;
 
         selected.Add(window);
         window.SetClicked(true);
 
-        // Wrong selection -> reset puzzle
+        // Wrong selection resets puzzle
         if (!window.IsCorrect(target))
         {
             AudioManager.Instance.PlaySound(failSound);
@@ -164,7 +226,7 @@ public class Puzzle2Manager : MonoBehaviour
             return;
         }
 
-        // All correct windows found -> next stage
+        // All correct found -> next stage
         if (selected.Count == correct.Count)
         {
             NextStage();
@@ -177,13 +239,13 @@ public class Puzzle2Manager : MonoBehaviour
 
         ShowDialogue("Parfait continuons !");
 
-        // Puzzle complete
+        // Puzzle completion condition
         if (stage >= maxStages)
         {
             AudioManager.Instance.PlaySound(completeSound);
             ShowDialogue("Te voici fugitif !");
-            gameObject.SetActive(false); 
-            GameEvents.OnPuzzle2Completed?.Invoke("Puzzle2"); // subscrition in PuzzleInteraction
+            gameObject.SetActive(false);
+            GameEvents.OnPuzzle2Completed?.Invoke("Puzzle2");
             return;
         }
         else
@@ -197,7 +259,7 @@ public class Puzzle2Manager : MonoBehaviour
 
     void UpdateStageUI()
     {
-        // Update stage text
+        // Update stage counter UI
         if (stageText != null)
             stageText.text = "Stage " + (stage) + " / " + maxStages;
     }
@@ -209,9 +271,9 @@ public class Puzzle2Manager : MonoBehaviour
             dialogueText.text = message;
     }
 
-    // Sort Algo
     void ShuffleList<T>(List<T> list)
     {
+        // Fisher-Yates shuffle algorithm
         for (int i = 0; i < list.Count; i++)
         {
             int rand = Random.Range(i, list.Count);

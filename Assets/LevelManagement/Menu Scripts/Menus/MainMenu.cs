@@ -27,7 +27,7 @@ public class MainMenu : Menu
     {
         AudioManager.Instance.PlaySound("UI_Submit");
         yield return new WaitForSeconds(playDelay);
-        TransitionManager.Instance.TransitionToScene(sceneName, fadeTransition, pauseDelay);
+        TransitionManager.Instance.TransitionToScene("Puzzle2", fadeTransition, 1f);
     }
 
     public void OnSettingsPressed()

@@ -12,6 +12,10 @@ public enum SilhouetteType
     None,
     LongCoat,
     Thin,
-    Tall,
-    Small
+    //Thick,
+    TallWoman,
+    TallMan,
+    OldMan,
+    Smocker,
+    Dancer
 }
