@@ -108,7 +108,8 @@ public static class NoteSaveManager
     }
 
     /// <summary>
-    /// Method to delete the json files to reset the game. Is called OnApplicationQuit
+    /// Method to delete the json files to reset the game. 
+    /// This method should be called when the start menu is loaded and only in the start menu.
     /// </summary>
     public static void DeleteAllNotes()
     {
