@@ -12,7 +12,7 @@ public class MainMenu : Menu
     [SerializeField] private float playDelay = 0.5f;
     [SerializeField] private float pauseDelay = 2f;
     [SerializeField] private FadeTransition fadeTransition;
-    [SerializeField] private string sceneName = "Level";
+    [SerializeField] private string sceneName;
 
     private void OnEnable()
     {
@@ -27,7 +27,7 @@ public class MainMenu : Menu
     {
         AudioManager.Instance.PlaySound("UI_Submit");
         yield return new WaitForSeconds(playDelay);
-        TransitionManager.Instance.TransitionToScene("Puzzle2", fadeTransition, 1f);
+        TransitionManager.Instance.TransitionToScene(sceneName, fadeTransition, 1f);
     }
 
     public void OnSettingsPressed()
