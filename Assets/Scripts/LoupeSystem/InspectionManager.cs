@@ -13,6 +13,7 @@ public class InspectionManager : MonoBehaviour
     GameObject loupeAreaHiddenInstance;
 
     InputAction loupeModeAction;
+    bool loupeModeDisable = false;
 
     // TODO: Disable CharacterController when Loupe is on.
 
@@ -22,8 +23,22 @@ public class InspectionManager : MonoBehaviour
         loupeModeAction = InputSystem.actions.FindAction("Loupe");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
+    {
+        GameEvents.OnToggleDetectiveBoard += DisableLoupeMode;
+        GameEvents.OnDialogueStart += DisableLoupeMode;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnToggleDetectiveBoard -= DisableLoupeMode;
+        GameEvents.OnDialogueStart -= DisableLoupeMode;
+    }
+
+    private void DisableLoupeMode(bool disableLoupe) { loupeModeDisable = disableLoupe; }
+
+// Update is called once per frame
+void Update()
     {
         if(loupeModeAction.WasPerformedThisFrame())
         {
@@ -33,6 +48,8 @@ public class InspectionManager : MonoBehaviour
 
     public void ToggleLoupe()
     {
+        if (loupeModeDisable) return;
+
         if (loupeAreaHiddenInstance == null)
         {
             loupeAreaHiddenInstance = Instantiate(loupeAreaHidden);

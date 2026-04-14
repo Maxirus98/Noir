@@ -31,8 +31,8 @@ public class ToggleNoteBookObserver : MonoBehaviour
         notepad.SetActive(false);
     }
 
-    private void PreventNotepadToggle(bool intertactable)
+    private void PreventNotepadToggle(bool prevent)
     {
-        notepadToggle.GetComponent<Toggle>().interactable = intertactable;
+        notepadToggle.GetComponent<Toggle>().interactable = !prevent;
     }
 }

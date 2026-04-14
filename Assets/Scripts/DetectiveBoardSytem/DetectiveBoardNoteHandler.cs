@@ -42,7 +42,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.OnToggleDetectiveBoard?.Invoke(false);
+        GameEvents.OnToggleDetectiveBoard?.Invoke(true);
     }
 
     /// <summary>
@@ -170,7 +170,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
 
     private void OnDisable()
     {
-        GameEvents.OnToggleDetectiveBoard?.Invoke(true);
+        GameEvents.OnToggleDetectiveBoard?.Invoke(false);
         ClearBoardNotes();
     }
 }

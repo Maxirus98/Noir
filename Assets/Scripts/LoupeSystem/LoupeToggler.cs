@@ -7,10 +7,28 @@ public class LoupeToggler : MonoBehaviour
     private InspectionManager inspectionManager;
     private Toggle toggle;
 
+    private void Awake()
+    {
+        toggle = GetComponent<Toggle>();
+    }
+
+    private void OnEnable()
+    {
+        GameEvents.OnToggleDetectiveBoard += DisableLoupeToggle;
+        GameEvents.OnDialogueStart += DisableLoupeToggle;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnToggleDetectiveBoard -= DisableLoupeToggle;
+        GameEvents.OnDialogueStart -= DisableLoupeToggle;
+    }
+
+    private void DisableLoupeToggle(bool disableLoupe) { toggle.interactable = !disableLoupe; }
+
     void Start()
     {
         inspectionManager = FindAnyObjectByType<InspectionManager>();
-        toggle = GetComponent<Toggle>();
         toggle.onValueChanged.AddListener(delegate
         {
             ToggleLoupe();
