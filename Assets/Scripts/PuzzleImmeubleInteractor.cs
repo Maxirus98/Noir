@@ -1,21 +1,35 @@
 using UnityEngine;
 
-/// <summary>
-/// Script that lets the player see an interact pop up if the puzzle is not yet solved.
-/// </summary>
 public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
 {
+    [Header("State")]
     public bool PuzzleSolved;
     private bool playerInRange;
 
-    /// <summary>
-    /// Interact canvas is the first child of this object
-    /// </summary>
+    [Header("UI")]
     private GameObject interactCanvas;
+
+    [Header("Puzzle Data")]
+    [SerializeField] private DialogueData puzzleData;
+    [SerializeField] private GameObject displayToShow;
+    [SerializeField] private string puzzleID;
+
+    private bool triggered;
+    private DialogueData currentData;
 
     private void Start()
     {
         interactCanvas = transform.GetChild(0).gameObject;
+    }
+
+    private void OnEnable()
+    {
+        GameEvents.OnPuzzle2Completed += HandlePuzzleCompleted;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnPuzzle2Completed -= HandlePuzzleCompleted;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,13 +52,68 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (playerInRange)
+        if (!playerInRange || triggered) return;
+
+        StartPuzzleLogic();
+    }
+
+    // =========================
+    // START PUZZLE
+    // =========================
+    private void StartPuzzleLogic()
+    {
+        if (puzzleData == null)
         {
-            // TODO: Do something do start the puzzle
-            // TODO: Move camera to the top of the building
-            // TODO: Let the puzzle 3 start
-            Debug.Log("Player has interacted with immeuble");
+            Debug.LogWarning("No puzzleData assigned");
+            return;
         }
+
+        if (!ProgressionManager.Instance.HasAllFlags(puzzleData.requiredFlags))
+            return;
+
+        InputManager.Instance.DisablePlayerMovement();
+
+        currentData = puzzleData;
+
+        foreach (string flag in puzzleData.setFlags)
+        {
+            ProgressionManager.Instance.SetFlag(flag);
+        }
+
+        if (displayToShow != null)
+            displayToShow.SetActive(true);
+
+        interactCanvas.SetActive(false);
+
+        triggered = true;
+    }
+
+    // =========================
+    // END PUZZLE (EVENT)
+    // =========================
+    private void HandlePuzzleCompleted(string id)
+    {
+        if (id != puzzleID) return;
+
+        EndPuzzleLogic();
+    }
+
+    public void EndPuzzleLogic()
+    {
+        if (currentData?.indiceData != null)
+        {
+            NoteSaveManager.SaveNote(currentData.indiceData);
+            Debug.Log("Indice saved: " + currentData.indiceData.name);
+        }
+
+        currentData = null;
+
+        //InputManager.Instance.EnablePlayerMovement();
+        PuzzleSolved = true;
+
+        if (DialogueManager.Instance == null) return;
+        if (DialogueManager.Instance.IsDialogueActive) return;
+        DialogueManager.Instance.StartDialogue(puzzleData);
     }
 
     public void ShowKeypad()

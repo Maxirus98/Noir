@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 10
   ItemSprite: {fileID: 21300000, guid: d8f9e46a4449f004ca56ab840e5a498a, type: 2}
-  Description: "R\xE9soudre une enqu\xEAte"
+  Description: <color="red">Objectif Principal</color>
   dialogueOnFound: {fileID: 11400000, guid: e70871518b9f74d4ebe2f0f2d9a501e9, type: 2}
-  ExtraInformation: "Trouve: l'arme du crime, la victime, le coupable, la raison
-    et l'heure du d\xE9c\xE8s.\n"
+  ExtraInformation: "Pour r\xE9soudre une enqu\xEAte, il faut trouver l'arme du crime,
+    la victime, le coupable, la raison et l'heure du d\xE9c\xE8s."
   CanHelpToSolve: 0
   InvestigationSlotType: 0

@@ -37,7 +37,7 @@ EditorBuildSettings:
     guid: 9d740e92a4429f244bd8c49f02ec7c03
   - enabled: 1
     path: Assets/Scenes/AjmalScenesDialogue/RuePlaytestD.unity
-    guid: a591aa70c3478674cad06ea406410e73
+    guid: 61a8f02e4b2625044a1cfeb1439ca149
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

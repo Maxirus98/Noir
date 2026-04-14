@@ -16,6 +16,6 @@ MonoBehaviour:
   ItemSprite: {fileID: -1855960824160749528, guid: 1a6be50f23b25ab41a75abae94c8e2e0, type: 3}
   Description: "Traces de pas r\xE9centes"
   dialogueOnFound: {fileID: 11400000, guid: 87ce5a78e87519e4083c04b55198de6a, type: 2}
-  ExtraInformation: 
+  ExtraInformation: "Quelqu'un est pass\xE9 par ici"
   CanHelpToSolve: 0
   InvestigationSlotType: 0

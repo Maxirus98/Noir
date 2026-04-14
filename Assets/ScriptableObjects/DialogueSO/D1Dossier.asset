@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
   m_Name: D1Dossier
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  requiredFlags:
-  - okay
-  setFlags:
-  - never
+  requiredFlags: []
+  setFlags: []
   <indiceData>k__BackingField: {fileID: 0}
   lines:
   - speaker: Noir
