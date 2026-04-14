@@ -15,6 +15,7 @@ MonoBehaviour:
   Id: 8
   ItemSprite: {fileID: -8414823443302715599, guid: 1a6be50f23b25ab41a75abae94c8e2e0, type: 3}
   Description: "Un liquide renvers\xE9 sur le bar"
-  ExtraInformation: "Un poison mortel pour les d\xE9tectus"
+  dialogueOnFound: {fileID: 0}
+  ExtraInformation: Un poison mortel pour les humains
   CanHelpToSolve: 1
   InvestigationSlotType: 1

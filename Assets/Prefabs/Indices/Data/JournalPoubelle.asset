@@ -15,6 +15,7 @@ MonoBehaviour:
   Id: 6
   ItemSprite: {fileID: -7401608023273104681, guid: b9bd0ffee061c464c92dcc020cfdcbe7, type: 3}
   Description: "Le journal de la semaine pass\xE9e"
+  dialogueOnFound: {fileID: 11400000, guid: 121b4ade5c085654caf875ed87a9ffe5, type: 2}
   ExtraInformation: Sentez-vous au top du top du top de la loi de la rue avec votre
     long manteau transparent!
   CanHelpToSolve: 0

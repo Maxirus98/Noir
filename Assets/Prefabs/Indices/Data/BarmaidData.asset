@@ -15,6 +15,7 @@ MonoBehaviour:
   Id: 1
   ItemSprite: {fileID: -2714033257743725762, guid: f1dc2be91482eed4e95df8cb79f917fc, type: 3}
   Description: "La barmaid d\xE9c\xE9d\xE9e"
+  dialogueOnFound: {fileID: 11400000, guid: fb97428d82c6d4843b057dc71bbb5c7e, type: 2}
   ExtraInformation: "La barmaid est morte sur le plancher du bar. Elle semble avoir
     succomb\xE9e dans la derni\xE8re heure."
   CanHelpToSolve: 1

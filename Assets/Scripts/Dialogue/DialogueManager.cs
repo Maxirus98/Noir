@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -9,28 +10,79 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueUI dialogueUI;
 
-    void Awake()
+    private DialogueData currentDialogue;
+
+
+    float nextInputTime = 0f;
+    [SerializeField] float inputDelay = 0.1f;
+
+    public bool IsDialogueActive { get; set; }
+
+    private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void StartDialogue(DialogueData dialogue)
     {
-        lines.Clear();
+        // Disable input noir 
+        InputManager.Instance.DisablePlayerMovement();
 
-        foreach (var line in dialogue.lines)
+        // Vérifier les conditions
+        if (dialogue.requiredFlags != null)
+        {
+            //foreach (string flag in dialogue.requiredFlags)
+            //{
+            //    if (!ProgressionManager.Instance.HasFlag(flag))
+            //    {
+            //        Debug.Log("Dialogue locked. Missing flag: " + flag);
+            //        return;
+            //    }
+            //}
+            if (!ProgressionManager.Instance.HasAllFlags(dialogue.requiredFlags))
+                return;
+        }
+
+        currentDialogue = dialogue; // set indice data
+
+        lines.Clear();
+        IsDialogueActive = true;
+
+        foreach (DialogueLine line in dialogue.lines)
         {
             lines.Enqueue(line);
         }
 
+        if (dialogueUI != null)
+            dialogueUI.gameObject.SetActive(true);
+
         DisplayNextLine();
+
+        // Flags
+        if (dialogue.setFlags != null)
+        {
+            foreach (string flag in dialogue.setFlags)
+            {
+                ProgressionManager.Instance.SetFlag(flag);
+            }
+        }
     }
+
+
 
     public void DisplayNextLine()
     {
         if (lines.Count == 0)
         {
-            dialogueUI.Hide();
+            EndDialogue();
+            // reanable input move noir
             return;
         }
 
@@ -40,6 +92,13 @@ public class DialogueManager : MonoBehaviour
 
     public void Next()
     {
+        if (!IsDialogueActive)
+            return;
+
+        if (Time.time < nextInputTime)
+            return;
+        nextInputTime = Time.time + inputDelay;
+
         if (dialogueUI.IsTyping)
         {
             dialogueUI.SkipTyping();
@@ -48,6 +107,35 @@ public class DialogueManager : MonoBehaviour
         {
             DisplayNextLine();
         }
+    }
+
+    void EndDialogue()
+    {
+        IsDialogueActive = false;
+
+        if (dialogueUI != null)
+            dialogueUI.Hide();
+
+        // sauvegarde l'indice
+        if (currentDialogue != null && currentDialogue.indiceData != null )
+        {
+            NoteSaveManager.SaveNote(currentDialogue.indiceData);
+            Debug.Log("Indice saved: " + currentDialogue.indiceData.name);
+        }
+
+        currentDialogue = null;
+
+        // Réactiver input
+        InputManager.Instance.EnablePlayerMovement();
+    }
+
+    public void ResetDialogue()
+    {
+        lines.Clear();
+        IsDialogueActive = false;
+
+        if (dialogueUI != null)
+            dialogueUI.Hide();
     }
 
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,8 @@ public class NoteUiManager : MonoBehaviour
     public static NoteUiManager Instance;
     private static GameObject noteUi;
     private Animator noteAnimator;
+
+    private IndiceData lastIndiceData; // saves the latest dialogue from indice data
 
     [SerializeField]
     private GameObject newNoteBadge;
@@ -34,11 +37,46 @@ public class NoteUiManager : MonoBehaviour
         noteAnimator = GetComponentInChildren<Animator>(true);
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnIndiceFound += HandleIndiceFound;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnIndiceFound -= HandleIndiceFound;
+    }
+
+    private void HandleIndiceFound(IndiceData data)
+    {
+        lastIndiceData = data; // stores latest indice data 
+    }
+
     public void CloseNote()
     {
         noteAnimator.CrossFade("Close", 0.1f);
         newNoteBadge.SetActive(true);
+
+        if (lastIndiceData != null)
+            StartCoroutine(DelayedDialogue());
     }
+
+
+    private IEnumerator DelayedDialogue()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (lastIndiceData == null) yield break;
+        if (lastIndiceData.DialogueOnFound == null) yield break;
+
+        if (DialogueManager.Instance == null) yield break;
+        if (DialogueManager.Instance.IsDialogueActive) yield break;
+
+        DialogueManager.Instance.StartDialogue(lastIndiceData.DialogueOnFound);
+
+        lastIndiceData = null; // reset after indice use
+    }
+
 
     public static void ToggleNoteUi()
     {

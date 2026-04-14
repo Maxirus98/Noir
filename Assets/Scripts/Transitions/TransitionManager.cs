@@ -3,10 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class TransitionManager : MonoBehaviour
 {
     public static TransitionManager Instance;
+
+    [Header("Configs")]
+    [SerializeField] private List<TransitionConfigSO> configs;
+
+    private Dictionary<string, TransitionConfigSO> configMap;
 
     private void Awake()
     {
@@ -18,9 +24,20 @@ public class TransitionManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        // Build dictionary
+        configMap = configs.ToDictionary(c => c.sceneName, c => c);
     }
 
-    // Transition from a scene to another 
+    private TransitionConfigSO GetConfig(string sceneName)
+    {
+        if (configMap.TryGetValue(sceneName, out var config))
+            return config;
+
+        Debug.LogWarning($"No TransitionConfig found for scene: {sceneName}");
+        return null;
+    }
+
     public void TransitionToScene(string sceneName, FadeTransition transitionPrefab, float pauseDelay)
     {
         StartCoroutine(TransitionRoutine(sceneName, transitionPrefab, pauseDelay));
@@ -28,36 +45,34 @@ public class TransitionManager : MonoBehaviour
 
     private IEnumerator TransitionRoutine(string sceneName, FadeTransition transitionPrefab, float pauseDelay)
     {
-        // 1. Block inputs
         InputManager.Instance.DisableAll();
 
-        // 2. Spawn transition
-        FadeTransition transition =
-            Instantiate(transitionPrefab);
+        FadeTransition transition = Instantiate(transitionPrefab);
 
-        // 3. Fade in
+        var config = GetConfig(sceneName);
+        if (config != null)
+            transition.Init(config);
+
         yield return transition.PlayIn().WaitForCompletion();
 
-        yield return new WaitForSeconds(pauseDelay);
-        
-        // 4. Load scene
+        if (pauseDelay > 0f)
+            yield return new WaitForSeconds(pauseDelay);
+
         yield return SceneManager.LoadSceneAsync(sceneName);
 
-        // 5. Fade out
         yield return transition.PlayOut().WaitForCompletion();
 
-        // 6. Re-enable inputs on the next scene
         InputManager.Instance.EnableAll();
     }
 
 
     // Transition to fade in on the same scene when lose or win.
-    public void FadeInCurrentScene( FadeTransition transitionPrefab, Menu menuToOpen, float pauseDelay)
+    public void FadeInCurrentScene(FadeTransition transitionPrefab, Menu menuToOpen, float pauseDelay)
     {
         StartCoroutine(FadeInCurrentSceneRoutine(transitionPrefab, menuToOpen, pauseDelay));
     }
 
-    private IEnumerator FadeInCurrentSceneRoutine( FadeTransition transitionPrefab, Menu menuToOpen, float pauseDelay)
+    private IEnumerator FadeInCurrentSceneRoutine(FadeTransition transitionPrefab, Menu menuToOpen, float pauseDelay)
     {
         // 1. Block inputs
         InputManager.Instance.DisableAll();

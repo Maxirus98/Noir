@@ -31,6 +31,10 @@ public class IndiceData : ScriptableObject
     public Sprite ItemSprite;
     public string Description;
 
+    [Header("Linked Dialogue")]
+    [SerializeField] private DialogueData dialogueOnFound;
+    public DialogueData DialogueOnFound => dialogueOnFound;
+
     // Custom Serialization
     [TextArea(10, 20)]
     public string ExtraInformation;

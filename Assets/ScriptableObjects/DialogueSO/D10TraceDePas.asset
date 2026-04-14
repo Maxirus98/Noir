@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
+  m_Name: D10TraceDePas
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  requiredFlags:
+  - 4_puzzle2time
+  setFlags:
+  - 5_whatnext
+  <indiceData>k__BackingField: {fileID: 0}
+  lines:
+  - speaker: Noir
+    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
+    text: "Des traces de pas de liqueur...\nIl n\u2019est pas seul"
+    typingSpeed: 0.1
+  - speaker: Noir
+    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
+    text: "Il a clairement un complice pour l\u2019aider"
+    typingSpeed: 0.1

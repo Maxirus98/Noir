@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 
+[DefaultExecutionOrder(-1000)] // garantit qu'il se fasse appele en premier
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance;
@@ -26,6 +28,16 @@ public class InputManager : MonoBehaviour
         if (Inputs == null)
         {
             Inputs = new PlayerMapActions();
+        }
+    }
+
+    private void Update()
+    {
+        if (DialogueManager.Instance != null &&
+            DialogueManager.Instance.IsDialogueActive &&
+            Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            DialogueManager.Instance.Next();
         }
     }
 
@@ -60,6 +72,19 @@ public class InputManager : MonoBehaviour
 
         if (UIInputModule)
             UIInputModule.enabled = false;
+    }
+
+
+    public void DisablePlayerMovement()
+    {
+        FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = false;
+        Inputs.Player.Move.Disable();
+    }
+
+    public void EnablePlayerMovement()
+    {
+        FindAnyObjectByType<NoirMouvement>().GetComponent<PlayerInput>().enabled = true;
+        Inputs.Player.Move.Enable();
     }
 
 

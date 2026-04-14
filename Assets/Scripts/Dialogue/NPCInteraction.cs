@@ -1,25 +1,31 @@
-using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NPCInteraction : MonoBehaviour
+public class NPCInteraction : DialogueInteraction
 {
-    [SerializeField] private DialogueData dialogue;
-
-    private void Start()
-    {
-        Interact();
-    }
-    public void Interact()
-    {
-        DialogueManager.Instance.StartDialogue(dialogue);
-    }
-
     void Update()
     {
-        // todo:debug a enlever 
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (!playerInRange) return;
+
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            StartDialogue();
+        }
+
+        if (DialogueManager.Instance != null &&
+            DialogueManager.Instance.IsDialogueActive &&
+            Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             DialogueManager.Instance.Next();
         }
+    }
+
+    protected override void OnPlayerExit()
+    {
+        base.OnPlayerExit();
+
+        if (DialogueManager.Instance == null) return;
+
+        DialogueManager.Instance.IsDialogueActive = false;
+        DialogueManager.Instance.ResetDialogue();
     }
 }

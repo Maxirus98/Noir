@@ -109,8 +109,12 @@ public class LoupeInteractionHandler : MonoBehaviour
 
             // Play clue found sound
             audioManager.PlaySound("SFX_ClueFound");
+
+            // Triggers dialogue from indice
+            GameEvents.OnIndiceFound?.Invoke(indice.data);
         }
     }
+
 
     private void OnDestroy()
     {
