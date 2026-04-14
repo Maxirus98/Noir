@@ -848,6 +848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5593989221419314876}
   - component: {fileID: 6443423676025910372}
+  - component: {fileID: 4118192380401969266}
   m_Layer: 5
   m_Name: NoteHudToggle
   m_TagString: Untagged
@@ -885,6 +886,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872067170878093641}
   m_CullTransparentMesh: 1
+--- !u!114 &4118192380401969266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872067170878093641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483409fcaab4f594b9ab06688c69afd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToggleNoteBookObserver
+  notepadToggle: {fileID: 8171704730024305443}
+  notepad: {fileID: 3954406641968127418}
 --- !u!1 &1181862443564658408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,7 +5870,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 5289137755614155598}
   toggleTransition: 1
   graphic: {fileID: 0}
   m_Group: {fileID: 0}

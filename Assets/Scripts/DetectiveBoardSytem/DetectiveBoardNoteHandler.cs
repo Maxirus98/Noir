@@ -40,6 +40,11 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
         audioManager = FindAnyObjectByType<AudioManager>();
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnToggleDetectiveBoard?.Invoke(false);
+    }
+
     /// <summary>
     /// Remove board note at the corresponding index in the note gameObjects List and 
     /// the List of notes that is currently on the board
@@ -142,9 +147,6 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
             canClearBoardNotes = true;
             ClearBoardNotes();
         }
-
-        
-
     }
 
     /// <summary>
@@ -168,6 +170,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
 
     private void OnDisable()
     {
+        GameEvents.OnToggleDetectiveBoard?.Invoke(true);
         ClearBoardNotes();
     }
 }

@@ -10,8 +10,8 @@ public class DetectiveBoardInteraction : MonoBehaviour, IInteractable
     public void Interact()
     {
         Debug.Log("interacted with board");
-        notepadUi.SetActive(!notepadUi.activeInHierarchy);
         detectiveBoardUi.SetActive(!detectiveBoardUi.activeInHierarchy);
+        notepadUi.SetActive(detectiveBoardUi.activeInHierarchy);
     }
 
     public void ShowKeypad()
