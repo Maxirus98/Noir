@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: PuzzleD5
+  m_Name: D5Egout
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  requiredFlags:
-  - 5_whatnext
-  setFlags:
-  - 6_cool
-  <indiceData>k__BackingField: {fileID: 11400000, guid: 7e5043bb6b68ecc42a2062df10b1a180, type: 2}
-  lines: []
+  requiredFlags: []
+  setFlags: []
+  <indiceData>k__BackingField: {fileID: 0}
+  lines:
+  - speaker: Noir
+    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
+    text: "Les rideaux\u2026 Un luxe r\xE9serv\xE9 \xE0 une certaine classe."
+    typingSpeed: 0.02

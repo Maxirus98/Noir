@@ -31,6 +31,16 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (DialogueManager.Instance != null &&
+            DialogueManager.Instance.IsDialogueActive &&
+            Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            DialogueManager.Instance.Next();
+        }
+    }
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

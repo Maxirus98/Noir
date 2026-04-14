@@ -15,6 +15,7 @@ MonoBehaviour:
   Id: 4
   ItemSprite: {fileID: 21300000, guid: 06ee10af6f065b849b58ff8c678cc57f, type: 2}
   Description: Journal d'aujourd'hui
+  dialogueOnFound: {fileID: 11400000, guid: 878c01f0b9f32d24eacdacf5d6082046, type: 2}
   ExtraInformation: "\xCAtes-vous fatigu\xE9 d'habiter dans un immeuble moche? Vous
     n'\xEAtes pas un vrai criminel sans \xE9l\xE9gance! Avec nos nouveaux balcons,
     faites rayonner votre vu sur le quartier. M\xEAme votre prochaine victime sera

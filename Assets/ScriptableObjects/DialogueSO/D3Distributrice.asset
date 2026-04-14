@@ -10,22 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: BarmaidD1
+  m_Name: D3Distributrice
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags: []
-  setFlags:
-  - 2_talked_barmaid
+  setFlags: []
   <indiceData>k__BackingField: {fileID: 0}
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: Bonjour
-    typingSpeed: 0.05
-  - speaker: Barmaid
-    sprite: {fileID: -2216033458992054209, guid: 62c7cb85d1c15b44db9ea78f50c60da1, type: 3}
-    text: "Qu'est-ce que vous voulez d\xE9tective ?"
-    typingSpeed: 0.05
-  - speaker: Noir
-    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: Je cherche quelqu'un.
-    typingSpeed: 0.05
+    text: "Les balcons\u2026 nouvelle obsession du quartier. "
+    typingSpeed: 0.02

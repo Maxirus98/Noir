@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: BarmaidD3
+  m_Name: D9BarmaidMorte
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags:
-  - 3_trouver_trois_vol
-  setFlags:
   - 4_puzzle2time
+  setFlags:
+  - 5_whatnext
   <indiceData>k__BackingField: {fileID: 0}
   lines:
   - speaker: Noir
-    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "Cool j'ai trouv\xE9 les 3 vols"
+    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
+    text: "Il l\u2019a tu\xE9e\u2026 \r\n\r\n"
+    typingSpeed: 0.1
+  - speaker: Noir
+    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
+    text: "Personne m\xE9rite \xE7a"
     typingSpeed: 0.1

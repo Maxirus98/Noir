@@ -42,11 +42,13 @@ public class DialogueUI : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        //IsTyping = false;
+        IsTyping = false;
     }
 
     public void SkipTyping()
     {
+        if (!IsTyping) return; // évite spam
+
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 

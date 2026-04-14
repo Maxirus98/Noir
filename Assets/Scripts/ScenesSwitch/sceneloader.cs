@@ -7,7 +7,9 @@ public class sceneloader : MonoBehaviour
     public GameObject player;
     public Canvas ui;
 
-    public Vector3 spawnPosition;
+    public Vector3 spawnPosition = new Vector3(4.3f, -3.96f, 0f);
+    [SerializeField] private FadeTransition fadeTransition;
+
 
     private void Awake()
     {
@@ -25,9 +27,10 @@ public class sceneloader : MonoBehaviour
 
     public void LoadScene(string sceneName,Vector3 newSpawnPosition) 
     {
+        TransitionManager.Instance.TransitionToScene(sceneName, fadeTransition, 1f);
         spawnPosition = newSpawnPosition;
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadSceneAsync(sceneName);
+        //SceneManager.LoadSceneAsync(sceneName);
     }
 
 

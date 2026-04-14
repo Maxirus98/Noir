@@ -258,7 +258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUREAU DETECTUS
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20f0cd1a2ab541a4186f2655e57d2b40, type: 2}
   m_sharedMaterial: {fileID: -8857246297495761560, guid: 20f0cd1a2ab541a4186f2655e57d2b40, type: 2}

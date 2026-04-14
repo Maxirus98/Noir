@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: NoirD4
+  m_Name: D8EntreBar
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  requiredFlags:
-  - 4_puzzle2time
-  setFlags:
-  - 5_whatnext
+  requiredFlags: []
+  setFlags: []
+  <indiceData>k__BackingField: {fileID: 0}
   lines:
   - speaker: Noir
-    sprite: {fileID: -419148016115861290, guid: b9acfde8ef3bc364189572ed4732263f, type: 3}
-    text: "Hmmmm voila ! J'ai trouv\xE9 le batiment"
-    typingSpeed: 0.1
+    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
+    text: "Trop calme dans un bar\u2026 mauvais signe\r\n"
+    typingSpeed: 0.02
