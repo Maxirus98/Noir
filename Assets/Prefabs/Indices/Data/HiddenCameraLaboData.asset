@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
+  m_Name: HiddenCameraLaboData
+  m_EditorClassIdentifier: Assembly-CSharp::IndiceData
+  Id: 13
+  ItemSprite: {fileID: 500117178076965338, guid: 1a6be50f23b25ab41a75abae94c8e2e0, type: 3}
+  Description: "Une autre cam\xE9ra cach\xE9e"
+  ExtraInformation: Ils controllent vraiment tout dans cette ville.
+  CanHelpToSolve: 0
+  InvestigationSlotType: 0

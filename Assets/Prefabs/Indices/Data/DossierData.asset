@@ -17,6 +17,6 @@ MonoBehaviour:
   Description: "Dossier D\xE9tectus"
   dialogueOnFound: {fileID: 0}
   ExtraInformation: "Un dossier qui appartient \xE0 l'ancienne d\xE9tectus sur cette
-    enqu\xEAte. Il me semble qu' elle soit devenue barmaid."
+    enqu\xEAte. Il me semble qu' elle soit devenue <color=\"red\"><u>barmaid.</u></color>"
   CanHelpToSolve: 0
   InvestigationSlotType: 0

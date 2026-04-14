@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JournalEgout
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 5
-  ItemSprite: {fileID: 21300000, guid: 0ea2a52549a0d3942a51fd0469272f5d, type: 2}
+  ItemSprite: {fileID: 6947697791426047313, guid: b9bd0ffee061c464c92dcc020cfdcbe7, type: 3}
   Description: "Le journal du mois pass\xE9e"
   dialogueOnFound: {fileID: 11400000, guid: bf689f38bf071914cbe1d1cfa2229e8f, type: 2}
   ExtraInformation: "Suivez les tendances fen\xEAtres! Passez inaper\xE7u avec nos
