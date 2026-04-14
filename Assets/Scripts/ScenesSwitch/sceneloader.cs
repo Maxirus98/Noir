@@ -7,7 +7,7 @@ public class sceneloader : MonoBehaviour
     public GameObject player;
     public Canvas ui;
 
-    public Vector3 spawnPosition;
+    public Vector3 spawnPosition = new Vector3(4.3f, -3.96f, 0f);
 
     private void Awake()
     {

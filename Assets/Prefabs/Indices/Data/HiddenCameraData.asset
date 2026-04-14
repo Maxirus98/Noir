@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
-  m_Name: Journal
+  m_Name: HiddenCameraData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 3
-  ItemSprite: {fileID: 21300000, guid: dd7f9eb177d4d074d95d904f8f0dab78, type: 3}
-  Description: Journal
-  ExtraInformation: Un journal bien simple
+  Id: 11
+  ItemSprite: {fileID: 21300000, guid: d5d23487fa57a2647852a27700dbef94, type: 2}
+  Description: "Une camera cach\xE9e"
+  ExtraInformation: "Une cam\xE9ra est cach\xE9e dans le tableau "
   CanHelpToSolve: 0
   InvestigationSlotType: 0

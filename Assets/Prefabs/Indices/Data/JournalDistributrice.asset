@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JournalDistributrice
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 4
-  ItemSprite: {fileID: 21300000, guid: 06ee10af6f065b849b58ff8c678cc57f, type: 2}
+  ItemSprite: {fileID: -4249334105020872492, guid: b9bd0ffee061c464c92dcc020cfdcbe7, type: 3}
   Description: Journal d'aujourd'hui
   ExtraInformation: "\xCAtes-vous fatigu\xE9 d'habiter dans un immeuble moche? Vous
     n'\xEAtes pas un vrai criminel sans \xE9l\xE9gance! Avec nos nouveaux balcons,

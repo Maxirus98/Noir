@@ -9,6 +9,7 @@ public class Keypad : MonoBehaviour
 
     public TextMeshProUGUI displayText;
     public GameObject door;
+    public GameObject behindDoor;
     public GameObject keypad;
     public KeypadActive keypadActivescript;
 
@@ -40,17 +41,21 @@ public class Keypad : MonoBehaviour
     void AddSymbol(string symbol)
     {
         currentInput += symbol;
+        Debug.Log($"Current Input: {currentInput}");
         displayText.text = string.Join(" ", currentInput.ToCharArray());
     }
 
     public void Enter()
     {
-        if (currentInput == correctCode)
+        // To come back from a char array
+        currentInput = currentInput.ToString().Trim();
+        correctCode = correctCode.ToString().Trim();
+        if (currentInput.Equals(correctCode))
         {
-            door.GetComponent<BoxCollider2D>().enabled = true;
-            keypad.SetActive(false);
-
             keypadActivescript.PuzzelSolved();
+            door.SetActive(false);
+            behindDoor.SetActive(true);
+            keypad.SetActive(false);
         }
         else
         {

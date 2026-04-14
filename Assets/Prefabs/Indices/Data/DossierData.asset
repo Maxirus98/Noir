@@ -16,6 +16,6 @@ MonoBehaviour:
   ItemSprite: {fileID: -4218905753032761122, guid: 68ba367f4c8c2f944b81a4ba85fbcdef, type: 3}
   Description: "Dossier D\xE9tectus"
   ExtraInformation: "Un dossier qui appartient \xE0 l'ancienne d\xE9tectus sur cette
-    enqu\xEAte. Il me semble qu' elle soit devenue barmaid."
+    enqu\xEAte. Il me semble qu' elle soit devenue <color=\"red\"><u>barmaid.</u></color>"
   CanHelpToSolve: 0
   InvestigationSlotType: 0
