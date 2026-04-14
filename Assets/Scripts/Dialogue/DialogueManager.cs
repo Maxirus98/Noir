@@ -35,6 +35,8 @@ public class DialogueManager : MonoBehaviour
         // Disable input noir 
         InputManager.Instance.DisablePlayerMovement();
 
+        // Désactiver le notepad
+        GameEvents.OnDialogueStart?.Invoke(true);
         // Vérifier les conditions
         if (dialogue.requiredFlags != null)
         {
@@ -127,6 +129,9 @@ public class DialogueManager : MonoBehaviour
 
         // Réactiver input
         InputManager.Instance.EnablePlayerMovement();
+
+        // Réactiver le notepad
+        GameEvents.OnDialogueStart?.Invoke(false);
     }
 
     public void ResetDialogue()

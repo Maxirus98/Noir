@@ -18,6 +18,7 @@ public class LoupeInteractionHandler : MonoBehaviour
     private void OnEnable()
     {
         Cursor.visible = false;
+        GameEvents.OnInspect?.Invoke(true);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -119,5 +120,6 @@ public class LoupeInteractionHandler : MonoBehaviour
     private void OnDestroy()
     {
         Cursor.visible = true;
+        GameEvents.OnInspect?.Invoke(false);
     }
 }
