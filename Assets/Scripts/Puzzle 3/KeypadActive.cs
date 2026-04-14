@@ -1,30 +1,19 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class KeypadActive : MonoBehaviour, IInteractable
 
 {
-    [Header ("GameObject")]
-    public GameObject keypad; // Keypad
-    public GameObject pressE; // popup text
+    public GameObject keypadPuzzleCanvas;
+    public GameObject interactCanvas;
 
     private bool playerInRange = false;
     private bool puzzleSolved = false;
-    private BoxCollider2D bc;
-
-    void Awake()
-    {
-        bc = GetComponent<BoxCollider2D>();
-    }
-
-  
 
     public void ShowKeypad()
     {
-        if (playerInRange && keypad != null)
+        if (playerInRange && keypadPuzzleCanvas != null)
        {
-           keypad.SetActive(true);
+           keypadPuzzleCanvas.SetActive(true);
        }
     }
 
@@ -34,10 +23,8 @@ public class KeypadActive : MonoBehaviour, IInteractable
         if (!puzzleSolved && other.CompareTag("Player"))
         {
             playerInRange = true;
-            pressE.SetActive(true);
+            interactCanvas.SetActive(true);
         }
-
-
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -45,18 +32,16 @@ public class KeypadActive : MonoBehaviour, IInteractable
         if (!puzzleSolved && other.CompareTag("Player"))
         {
             playerInRange = false;
-            pressE.SetActive(false);
+            interactCanvas.SetActive(false);
         }
-          
     }
 
     public void PuzzelSolved()
     {
         puzzleSolved = true; //resolution du puzzle
-        keypad.SetActive(false); // hide keypad
-       playerInRange = false;
-        bc.enabled = false; //Disable interact 
-        print ("Puzzle Solved");
+        keypadPuzzleCanvas.SetActive(false); // hide keypad
+        interactCanvas.SetActive(false);
+        playerInRange = false;
     }
 
     void IInteractable.Interact()
@@ -66,6 +51,6 @@ public class KeypadActive : MonoBehaviour, IInteractable
 
     private void Interact()
     {
-        keypad.SetActive(true);
+        keypadPuzzleCanvas.SetActive(true);
     }
 }
