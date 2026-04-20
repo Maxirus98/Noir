@@ -71,4 +71,9 @@ public class Keypad : MonoBehaviour
         currentInput = "";
         displayText.text = "";
     }
+
+    public void ExitB()
+    {
+        keypad.SetActive(false);
+    }
 }
