@@ -7,9 +7,8 @@ public class sceneloader : MonoBehaviour
     public GameObject player;
     public Canvas ui;
 
-    public Vector3 spawnPosition = new Vector3(4.3f, -3.96f, 0f);
+    public Vector3 spawnPosition;
     [SerializeField] private FadeTransition fadeTransition;
-
 
     private void Awake()
     {
@@ -23,6 +22,8 @@ public class sceneloader : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        spawnPosition = new Vector3(4.3f, -3.96f, 0f);
+
     }
 
     public void LoadScene(string sceneName,Vector3 newSpawnPosition) 

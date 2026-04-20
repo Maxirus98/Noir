@@ -1,6 +1,8 @@
-using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 // Create matched pair silhouette
 [System.Serializable]
@@ -42,7 +44,11 @@ public class Puzzle2Manager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private string successStepSound; 
     [SerializeField] private string failSound; 
-    [SerializeField] private string completeSound; 
+    [SerializeField] private string completeSound;
+
+    [SerializeField] private GameObject puzzleRoot; // Root object to enable/disable
+    [SerializeField] private KeyCode exitKey = KeyCode.Backspace; // Exit input
+    [SerializeField] private bool isCompleted = false;
 
     private List<WindowButton> correct = new List<WindowButton>(); // Valid windows cache
     private List<WindowButton> selected = new List<WindowButton>(); // Player selections
@@ -61,6 +67,50 @@ public class Puzzle2Manager : MonoBehaviour
             window.Init(this);
 
         UpdateStageUI();
+        Shuffle();
+    }
+
+    void Update()
+    {
+        // Exit puzzle if active and key pressed
+        if (puzzleRoot != null && puzzleRoot.activeInHierarchy)
+        {
+            if (Keyboard.current.backspaceKey.wasPressedThisFrame)
+            {
+                ExitPuzzle();
+            }
+
+        }
+    }
+
+    void ExitPuzzle()
+    {
+        // Reset puzzle state if not completed
+        if (!isCompleted)
+        {
+            ResetPuzzle();
+        }
+
+        // Hide puzzle UI
+        if (puzzleRoot != null)
+            puzzleRoot.SetActive(false);
+
+        // Re-enable player movement
+        InputManager.Instance.EnablePlayerMovement();
+
+        GameEvents.OnPuzzle2Exited?.Invoke("Puzzle2");
+    }
+
+    public void ResetPuzzle()
+    {
+        // Reset progression state
+        stage = 0;
+        correct.Clear();
+        selected.Clear();
+
+        UpdateStageUI();
+        ShowDialogue("");
+
         Shuffle();
     }
 
@@ -242,6 +292,7 @@ public class Puzzle2Manager : MonoBehaviour
         // Puzzle completion condition
         if (stage >= maxStages)
         {
+            isCompleted = true;
             AudioManager.Instance.PlaySound(completeSound);
             ShowDialogue("Te voici fugitif !");
             gameObject.SetActive(false);

@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: D2RencontreVilainAVOIR
+  m_Name: D16CaptureVillainAVOIR
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  requiredFlags:
-  - 2_talked_barmaid
-  setFlags:
-  - 3_trouver_trois_vol
+  requiredFlags: []
+  setFlags: []
   <indiceData>k__BackingField: {fileID: 11400000, guid: bce9b9a2ad141a6448984378653078fb, type: 2}
   lines:
   - speaker: Vilain

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: D11Puzzle2CoupableAVOIR
+  m_Name: D12LaboSelf
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags: []
   setFlags: []
@@ -18,9 +18,5 @@ MonoBehaviour:
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: Le coupable vit ici
-    typingSpeed: 0.05
-  - speaker: Noir
-    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "Ils vont \xEAtre arr\xEAt\xE9 sur-le-champ"
+    text: "Alors\u2026 qu\u2019est-ce que tu caches ici ?"
     typingSpeed: 0.05

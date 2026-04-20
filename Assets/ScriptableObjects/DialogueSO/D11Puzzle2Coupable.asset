@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: D0ResoudreEnquete
+  m_Name: D11Puzzle2Coupable
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags: []
   setFlags: []
@@ -18,6 +18,9 @@ MonoBehaviour:
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "Je devrais revenir ici quand j\u2019aurai rassembl\xE9 assez d\u2019indices
-      pour r\xE9soudre cette enqu\xEAte sur mon tableau. "
-    typingSpeed: 0.02
+    text: Le coupable vit ici
+    typingSpeed: 0.05
+  - speaker: Noir
+    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
+    text: "Il me faut plus de preuves\u2026 assez pour les arr\xEAter imm\xE9diatement"
+    typingSpeed: 0.05

@@ -15,6 +15,7 @@ MonoBehaviour:
   Id: 3
   ItemSprite: {fileID: 3370265748231364136, guid: 725d3dc63f6b49047a0c67c370e747e8, type: 3}
   Description: "Une pr\xE9paration mortelle"
+  dialogueOnFound: {fileID: 11400000, guid: 0096f3a66cba85949b66dcd9c57509c2, type: 2}
   ExtraInformation: "Probablement la m\xEAme substance qui se trouve au laboratoire"
   CanHelpToSolve: 0
   InvestigationSlotType: 0
