@@ -1,19 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class SelfInteraction : DialogueInteraction
 {
-    [SerializeField] private /*static*/ bool triggered = false;
+    [SerializeField] private string uniqueFlag; // triggers one time during the whole game
 
+    // disable trigger if flag exist in hashset Progression Manager singleton
     private void Start()
     {
-        //if (NoteSaveManager.GetSavedNotes().notes.Count <= 0)
-        //{
-        //    triggered = false;
-        //}
+        if (ProgressionManager.Instance.HasFlag(uniqueFlag))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
+    // next dialogue space
     void Update()
     {
         if (DialogueManager.Instance != null &&
@@ -23,36 +24,16 @@ public class SelfInteraction : DialogueInteraction
             DialogueManager.Instance.Next();
         }
     }
-
     protected override void OnPlayerEnter()
     {
-        if (triggered) return;
+        // if flags exist dont trigger
+        if (ProgressionManager.Instance.HasFlag(uniqueFlag))
+            return;
 
-        triggered = true;
+        // set flag to avoid triggering it again
+        ProgressionManager.Instance.SetFlag(uniqueFlag);
+
         StartDialogue();
     }
 
-    //private void OnApplicationQuit()
-    //{
-    //    triggered = false;
-    //}
-
-    //private void OnEnable()
-    //{
-    //    SceneManager.sceneLoaded += OnSceneLoaded;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    SceneManager.sceneLoaded -= OnSceneLoaded;
-    //}
-
-    //// This method is called whenever a new scene is loaded
-    //void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    //{
-    //    if(scene.name != "BureauTestD")
-    //    {
-    //        triggered = false;
-    //    }
-    //}
 }

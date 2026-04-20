@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: D1Dossier
+  m_Name: D8EntreBarSelf
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags: []
   setFlags: []
@@ -18,10 +18,5 @@ MonoBehaviour:
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "L\u2019ancienne d\xE9tective a laiss\xE9 un dossier ici\n"
-    typingSpeed: 0.05
-  - speaker: Noir
-    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "Si je veux des r\xE9ponses\u2026 \nFaudra inspecter le bureau <b>Pesez
-      (F) pour Inspecter"
-    typingSpeed: 0.05
+    text: "Trop calme dans un bar\u2026 mauvais signe\r\n"
+    typingSpeed: 0.02

@@ -15,6 +15,7 @@ MonoBehaviour:
   Id: 13
   ItemSprite: {fileID: 500117178076965338, guid: 1a6be50f23b25ab41a75abae94c8e2e0, type: 3}
   Description: "Une autre cam\xE9ra cach\xE9e"
+  dialogueOnFound: {fileID: 11400000, guid: b342970d77d989648a6bb78ae05f7e8f, type: 2}
   ExtraInformation: Ils controllent vraiment tout dans cette ville.
-  CanHelpToSolve: 0
-  InvestigationSlotType: 0
+  CanHelpToSolve: 1
+  InvestigationSlotType: 4

@@ -13,7 +13,6 @@ public class NoirMouvement : MonoBehaviour
     private Animator anim;
     public GameObject menu;
 
-    
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -32,11 +31,10 @@ public class NoirMouvement : MonoBehaviour
         transform.Translate(Vector2.right * movement.x * speed * Time.deltaTime);
 
         
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
-                menu.SetActive(true);
-               
-            }
+        if (Keyboard.current.digit1Key.wasPressedThisFrame)
+        {
+            menu.SetActive(true);
+        }
 
 
     }

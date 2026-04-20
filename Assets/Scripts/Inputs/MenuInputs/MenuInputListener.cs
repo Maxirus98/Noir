@@ -12,7 +12,6 @@ public class MenuInputListener: MonoBehaviour
     private AudioManager audioManager;
 
     private const string SCENE_MAIN_MENU = "MainMenu";
-    private const string SCENE_LEVEL = "Level";
 
     [SerializeField] private float deadZone = 0.5f;
     [SerializeField] private float firstRepeatDelay = 0.15f;
@@ -101,7 +100,7 @@ public class MenuInputListener: MonoBehaviour
         if (!context.performed)
             return;
 
-        if (!IsGameplayScene())
+        if (IsMainMenuScene())
             return;
 
         if (menuManager == null)
@@ -126,9 +125,6 @@ public class MenuInputListener: MonoBehaviour
 
     private bool IsMainMenuScene() =>
         SceneManager.GetActiveScene().name == SCENE_MAIN_MENU;
-
-    private bool IsGameplayScene() =>
-        SceneManager.GetActiveScene().name == SCENE_LEVEL;
 
     private void OnNavigate(InputAction.CallbackContext context)
     {

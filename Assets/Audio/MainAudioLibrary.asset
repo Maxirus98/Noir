@@ -16,7 +16,7 @@ MonoBehaviour:
   - id: Music_MainMenu
     clip: {fileID: 8300000, guid: 5c850a35c11a0ca4789f0eb00dbdc0bf, type: 3}
     type: 0
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 1
     randomizePitch: 0

@@ -10,19 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: D12LaboAVOIR
+  m_Name: D0ResoudreEnqueteSelf
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  requiredFlags:
-  - 5_whatnext
-  setFlags:
-  - 6_cool
+  requiredFlags: []
+  setFlags: []
   <indiceData>k__BackingField: {fileID: 0}
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: Le coupable vit ici
-    typingSpeed: 0.05
-  - speaker: Noir
-    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "Ils vont \xEAtre arr\xEAt\xE9 sur-le-champ"
-    typingSpeed: 0.05
+    text: "Je devrais revenir ici quand j\u2019aurai rassembl\xE9 assez d\u2019indices
+      pour r\xE9soudre cette enqu\xEAte sur mon tableau. "
+    typingSpeed: 0.02
