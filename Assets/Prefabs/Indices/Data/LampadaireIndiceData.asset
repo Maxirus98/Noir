@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LampadaireIndiceData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 14
-  ItemSprite: {fileID: 21300000, guid: 5185811d7fb5dfa45b16978e453ec7cf, type: 2}
-  Description: Lampadaire clignotant
+  ItemSprite: {fileID: 7899121643290921242, guid: c10ed14a5e9fcda41a758df408c6cc75, type: 3}
+  Description: Lampadaire clignotante
   dialogueOnFound: {fileID: 11400000, guid: cdf92945d2c5eb04cbe2413fdfc783f0, type: 2}
   ExtraInformation: La lampadaire veut nous dire quelque chose...
   CanHelpToSolve: 0

@@ -18,5 +18,9 @@ MonoBehaviour:
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "Cette lumi\xE8re ne clignote pas par hasard. \r\nC\u2019est un code. \r\n"
+    text: "Cette lumi\xE8re\u2026 pas un hasard"
+    typingSpeed: 0.02
+  - speaker: Noir
+    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
+    text: Il y a quelque chose qui cloche avec cette lampadaire
     typingSpeed: 0.02
