@@ -71,10 +71,18 @@ public class NoteUiManager : MonoBehaviour
 
         if (DialogueManager.Instance == null) yield break;
         if (DialogueManager.Instance.IsDialogueActive) yield break;
-
+        
+        // Start dialogue
         DialogueManager.Instance.StartDialogue(lastIndiceData.DialogueOnFound);
 
         lastIndiceData = null; // reset after indice use
+       
+        yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogueActive);
+
+        // 3 vols found ? event
+        print("On3VolsFound");
+        GameEvents.On3VolsFound?.Invoke();
+
     }
 
 

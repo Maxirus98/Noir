@@ -47,7 +47,6 @@ public class Puzzle2Manager : MonoBehaviour
     [SerializeField] private string completeSound;
 
     [SerializeField] private GameObject puzzleRoot; // Root object to enable/disable
-    [SerializeField] private KeyCode exitKey = KeyCode.Backspace; // Exit input
     [SerializeField] private bool isCompleted = false;
 
     private List<WindowButton> correct = new List<WindowButton>(); // Valid windows cache
