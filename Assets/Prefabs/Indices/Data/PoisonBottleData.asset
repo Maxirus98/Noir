@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PoisonBottleData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 8
-  ItemSprite: {fileID: 21300000, guid: 2d1e3ef046adbd54d8975333fa06f343, type: 2}
+  ItemSprite: {fileID: 21300000, guid: 45a19721d14125e428f4f2d181110690, type: 2}
   Description: "Un liquide renvers\xE9 sur le bar"
   dialogueOnFound: {fileID: 0}
   ExtraInformation: Un poison mortel pour les humains
