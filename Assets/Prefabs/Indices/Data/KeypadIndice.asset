@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: KeypadIndice
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 7
-  ItemSprite: {fileID: -4937186015157405812, guid: 62415bdd9deae224dba8740180a69f2e, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 080b3d6aced8d404fb6eee90d39df6ef, type: 2}
   Description: "Pav\xE9 num\xE9rique"
+  dialogueOnFound: {fileID: 0}
   ExtraInformation: "Un code morse secret sert \xE0 ouvrir cette porte."
   CanHelpToSolve: 0
   InvestigationSlotType: 0

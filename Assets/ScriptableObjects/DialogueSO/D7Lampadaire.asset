@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61db2adb91e8e764597030a14bb0f115, type: 3}
-  m_Name: D7LampadaireAVOIR
+  m_Name: D7Lampadaire
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags: []
   setFlags: []
@@ -18,9 +18,5 @@ MonoBehaviour:
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "Cette lumi\xE8re\u2026 pas un hasard"
-    typingSpeed: 0.02
-  - speaker: Noir
-    sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}
-    text: "C\u2019est un code"
+    text: "Cette lumi\xE8re ne clignote pas par hasard. \r\nC\u2019est un code. \r\n"
     typingSpeed: 0.02

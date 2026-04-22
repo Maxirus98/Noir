@@ -5,6 +5,7 @@ public static class GameEvents
     public static Action<string> OnPuzzle2Completed; // puzzle 2 
     public static Action<string> OnPuzzle2Exited; // puzzle 2 exited -> reset noir cam and control properly
     public static Action<IndiceData> OnIndiceFound; // dialogue triggers after closing the noteuipopup message
+    public static Action On3VolsFound; // triggers after founding 3 vols 
     public static Action<bool> OnInspect; // When Loupe is on 
     public static Action<bool> OnToggleDetectiveBoard; // When DetectiveBoard is on 
     public static Action<bool> OnDialogueStart; // When Dialogue is on 

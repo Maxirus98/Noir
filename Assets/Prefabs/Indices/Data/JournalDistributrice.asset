@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: JournalDistributrice
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 4
-  ItemSprite: {fileID: -4249334105020872492, guid: b9bd0ffee061c464c92dcc020cfdcbe7, type: 3}
+  ItemSprite: {fileID: 21300000, guid: d750c4ebfa9984745b032ef662669859, type: 2}
   Description: Journal d'aujourd'hui
   dialogueOnFound: {fileID: 11400000, guid: 878c01f0b9f32d24eacdacf5d6082046, type: 2}
-  ExtraInformation: "\xCAtes-vous fatigu\xE9 d'habiter dans un immeuble moche? Vous
-    n'\xEAtes pas un vrai criminel sans \xE9l\xE9gance! Avec nos nouveaux balcons,
-    faites rayonner votre vu sur le quartier. M\xEAme votre prochaine victime sera
-    amadou\xE9e!"
+  ExtraInformation: "Avec nos nouveaux balcons, faites rayonner votre vu sur le quartier.
+    M\xEAme votre prochaine victime sera amadou\xE9e!"
   CanHelpToSolve: 0
   InvestigationSlotType: 0
