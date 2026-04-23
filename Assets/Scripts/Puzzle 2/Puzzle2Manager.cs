@@ -270,7 +270,7 @@ public class Puzzle2Manager : MonoBehaviour
             AudioManager.Instance.PlaySound(failSound);
             stage = 0;
             UpdateStageUI();
-            ShowDialogue("N'oublie pas de suivre l'ordre en trouvant 3 éléments");
+            ShowDialogue("N'oubliez pas d'inspecter les Vols 3");
             Shuffle();
             return;
         }
@@ -286,14 +286,12 @@ public class Puzzle2Manager : MonoBehaviour
     {
         stage++;
 
-        ShowDialogue("Parfait continuons !");
-
         // Puzzle completion condition
         if (stage >= maxStages)
         {
             isCompleted = true;
             AudioManager.Instance.PlaySound(completeSound);
-            ShowDialogue("Te voici fugitif !");
+            //ShowDialogue("Te voici fugitif !");
             gameObject.SetActive(false);
             GameEvents.OnPuzzle2Completed?.Invoke("Puzzle2");
             return;

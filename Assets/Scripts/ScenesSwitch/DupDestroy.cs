@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DupDestroy : MonoBehaviour
 {
-    private static DupDestroy instance;
+    public static DupDestroy instance;
 
     void Awake()
     {
@@ -14,5 +14,14 @@ public class DupDestroy : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject); 
+    }
+
+    /// <summary>
+    /// Method to delete the json files to reset the game. 
+    /// This method is called when player quit game
+    /// </summary>
+    private void OnApplicationQuit()
+    {
+        NoteSaveManager.DeleteAllNotes();
     }
 }

@@ -20,15 +20,15 @@ public class NoteUiManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) {
-            Destroy(this);
-            Debug.Log("Can't have more instance for script" +  Instance.name);
-        } else
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
+            Destroy(gameObject);
+            Debug.Log("Can't have more instance for script" +  Instance.name);
+            return;
         }
 
-        DontDestroyOnLoad(this);
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()

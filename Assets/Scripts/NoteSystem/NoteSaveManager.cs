@@ -113,6 +113,11 @@ public static class NoteSaveManager
     /// </summary>
     public static void DeleteAllNotes()
     {
-        File.Delete(savePath);
+        savePath = Path.Combine(Application.persistentDataPath, "notes.json");
+
+        if (File.Exists(savePath))
+        {
+            File.Delete(savePath);
+        }
     }
 }
