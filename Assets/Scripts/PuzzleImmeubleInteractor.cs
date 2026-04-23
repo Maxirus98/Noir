@@ -190,7 +190,7 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
         ReturnCameraGameplay();
     }
 
-    private void ReturnCameraGameplay()
+    public void ReturnCameraGameplay()
     {
         isPuzzleActive = false;
 
@@ -206,6 +206,7 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
     {
         initialZoom = Camera.main.orthographicSize;
         initialCamPos = Camera.main.transform.position;
+        print(initialCamPos);
         Camera camComponent = Camera.main;
 
         Vector3 startPos = camComponent.transform.position;
@@ -248,8 +249,6 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
                 targetZoom,
                 Time.deltaTime * 2f
             );
-
-            print("zoom");
 
             if (timerZoom >= maxZoomTime) break; // failsafe
 

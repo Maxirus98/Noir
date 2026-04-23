@@ -17,5 +17,5 @@ MonoBehaviour:
   Description: "Une autre cam\xE9ra cach\xE9e"
   dialogueOnFound: {fileID: 11400000, guid: b342970d77d989648a6bb78ae05f7e8f, type: 2}
   ExtraInformation: Ils controllent vraiment tout dans cette ville.
-  CanHelpToSolve: 1
-  InvestigationSlotType: 4
+  CanHelpToSolve: 0
+  InvestigationSlotType: 0

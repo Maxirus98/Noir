@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags: []
   setFlags: []
-  <indiceData>k__BackingField: {fileID: 0}
+  <indiceData>k__BackingField: {fileID: 11400000, guid: fa721c7623abd9e41861c58d4b8685c2, type: 2}
   lines:
   - speaker: Noir
     sprite: {fileID: 21300000, guid: 25979d6c84086b449b18fd3ed312690c, type: 3}

@@ -35,30 +35,6 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-    }
-
-    private bool hasWrap;
-    [SerializeField] private FadeTransition fadeTransition;
-    private void Update()
-    {
-        // DEBUG: passer l'objectif avec 0
-        if (UnityEngine.InputSystem.Keyboard.current != null &&
-            UnityEngine.InputSystem.Keyboard.current.digit0Key.wasPressedThisFrame &&
-            !hasWrap)
-        {
-            hasWrap = true;
-            TransitionManager.Instance.TransitionToScene("Puzzle2-1", fadeTransition, 1f);
-            hasWrap = false;
-        }
-        if (UnityEngine.InputSystem.Keyboard.current != null &&
-            UnityEngine.InputSystem.Keyboard.current.digit1Key.wasPressedThisFrame &&
-            !hasWrap)
-        {
-            hasWrap = true;
-            TransitionManager.Instance.TransitionToScene("Puzzle2", fadeTransition, 1f);
-            hasWrap = false;
-        }
     }
 
     // MUSIC - PERSISTENT

@@ -15,6 +15,7 @@ MonoBehaviour:
   Id: 11
   ItemSprite: {fileID: 21300000, guid: d5d23487fa57a2647852a27700dbef94, type: 2}
   Description: "Une camera cach\xE9e"
+  dialogueOnFound: {fileID: 0}
   ExtraInformation: "Une cam\xE9ra est cach\xE9e dans le tableau "
   CanHelpToSolve: 0
   InvestigationSlotType: 0
