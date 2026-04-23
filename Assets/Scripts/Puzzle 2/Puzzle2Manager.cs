@@ -82,7 +82,7 @@ public class Puzzle2Manager : MonoBehaviour
         }
     }
 
-    void ExitPuzzle()
+    public void ExitPuzzle()
     {
         // Reset puzzle state if not completed
         if (!isCompleted)

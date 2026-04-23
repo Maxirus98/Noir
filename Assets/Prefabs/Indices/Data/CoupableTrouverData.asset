@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
-  m_Name: PlanMachineData
+  m_Name: CoupableTrouverData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 12
-  ItemSprite: {fileID: -6958361515484101994, guid: 134c2c374c6b56b4da824abadca74b04, type: 3}
-  Description: Plan de construction
-  dialogueOnFound: {fileID: 11400000, guid: 656c1591d715dd646bf7cffbc975c467, type: 2}
-  ExtraInformation: Un plan pour construire une machine destructrice
+  Id: 16
+  ItemSprite: {fileID: 0}
+  Description: "Coupable trouv\xE9"
+  dialogueOnFound: {fileID: 0}
+  ExtraInformation: Le coupable porte une longue veste transparente.
   CanHelpToSolve: 1
-  InvestigationSlotType: 5
+  InvestigationSlotType: 3
