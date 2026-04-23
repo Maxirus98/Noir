@@ -21,12 +21,13 @@ public class PauseMenu : Menu
     public void OnMainMenuPressed()
     {
         MenuManager.Instance.CloseMenu();
-        AudioManager.Instance.StopMusic();
+        OnReturnToMainMenu();
         LevelLoader.LoadMainMenuLevel();
     }
 
     public void OnQuitPressed()
     {
+        NoteSaveManager.DeleteAllNotes();
         Application.Quit();
         #if UNITY_EDITOR
                     UnityEditor.EditorApplication.isPlaying = false; // Exit option for editor 
