@@ -47,7 +47,7 @@ public class Keypad : MonoBehaviour
 
     public void Enter()
     {
-        // To come back from a char array
+        
         currentInput = currentInput.ToString().Trim();
         correctCode = correctCode.ToString().Trim();
         if (currentInput.Equals(correctCode))
@@ -56,11 +56,14 @@ public class Keypad : MonoBehaviour
             door.SetActive(false);
             behindDoor.SetActive(true);
             keypad.SetActive(false);
+            AudioManager.Instance.PlaySound("SFX_KeypadCorrectCode");
+
         }
         else
         {
             Debug.Log("Wrong code!");
             Clear();
+            AudioManager.Instance.PlaySound("SFX_KeypadwrongCode");
         }
 
 

@@ -85,3 +85,43 @@ MonoBehaviour:
     loop: 0
     randomizePitch: 0
     pitchRange: 0
+  - id: SFX_KeypadCorrectCode
+    clip: {fileID: 8300000, guid: 8b368f490b439324f8474fb2a35ad4d9, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_PostItHover
+    clip: {fileID: 8300000, guid: 6d8fc7b24cbc1b24f91ba80cac2c11b7, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: Music_AmbianceRue
+    clip: {fileID: 8300000, guid: 6d8fc7b24cbc1b24f91ba80cac2c11b7, type: 3}
+    type: 0
+    volume: 1
+    pitch: 2
+    loop: 1
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_KeypadwrongCode
+    clip: {fileID: 8300000, guid: d24372636ddbe8f46a75ef39c21d3b78, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_KeypadwrongCode
+    clip: {fileID: 8300000, guid: d24372636ddbe8f46a75ef39c21d3b78, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
