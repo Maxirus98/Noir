@@ -15,6 +15,7 @@ public class OnHoverNote : MonoBehaviour
     public void SetUnderline()
     {
         textMeshProUGUI.fontStyle = FontStyles.Underline;
+        AudioManager.Instance.PlaySound("SFX_PostItHover");
     }
 
     //On Exit

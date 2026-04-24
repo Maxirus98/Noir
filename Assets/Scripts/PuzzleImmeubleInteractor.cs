@@ -10,6 +10,7 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
 
     [Header("UI")]
     private GameObject interactCanvas;
+    [SerializeField] private GameObject labKeypad;
 
     [Header("Puzzle Data")]
     [SerializeField] private DialogueData puzzleData;
@@ -170,6 +171,9 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
 
         //delay avant dialogue
         StartCoroutine(EndPuzzle2WithDialogue());
+
+        labKeypad.GetComponent<BoxCollider2D>().enabled= true;
+
 
     }
     private IEnumerator EndPuzzle2WithDialogue()
