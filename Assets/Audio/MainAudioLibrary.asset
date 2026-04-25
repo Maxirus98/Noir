@@ -102,7 +102,7 @@ MonoBehaviour:
     randomizePitch: 0
     pitchRange: 0
   - id: Music_AmbianceRue
-    clip: {fileID: 8300000, guid: 6d8fc7b24cbc1b24f91ba80cac2c11b7, type: 3}
+    clip: {fileID: 8300000, guid: 22150d197eaf0e0469c526978ac73756, type: 3}
     type: 0
     volume: 1
     pitch: 2
@@ -110,17 +110,81 @@ MonoBehaviour:
     randomizePitch: 0
     pitchRange: 0
   - id: SFX_KeypadwrongCode
-    clip: {fileID: 8300000, guid: d24372636ddbe8f46a75ef39c21d3b78, type: 3}
+    clip: {fileID: 8300000, guid: e744de60b98c44a4f9394f2dfae8ca25, type: 3}
     type: 1
     volume: 1
     pitch: 2
     loop: 0
     randomizePitch: 0
     pitchRange: 0
-  - id: SFX_KeypadwrongCode
-    clip: {fileID: 8300000, guid: d24372636ddbe8f46a75ef39c21d3b78, type: 3}
+  - id: Music_BarRadioStatic
+    clip: {fileID: 8300000, guid: 09484ecba4c26e942aa7495d4ecc3f89, type: 3}
+    type: 0
+    volume: 0.188
+    pitch: 2
+    loop: 1
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_DoorOpenClose
+    clip: {fileID: 8300000, guid: fd8b5f146a3f00549a33eac9640936fb, type: 3}
     type: 1
     volume: 1
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_LabDoor
+    clip: {fileID: 8300000, guid: 9834fb403b583514b9839ff05135680e, type: 3}
+    type: 1
+    volume: 0.903
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: Music_TeleStatic
+    clip: {fileID: 8300000, guid: 6e7ce16fa02f3ee4b9cec2c7a862d33e, type: 3}
+    type: 0
+    volume: 0.01
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_PasCiment
+    clip: {fileID: 8300000, guid: 2002fc47dbfa3184688f4d9280fc050b, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_PasCimentReverb
+    clip: {fileID: 8300000, guid: 844492180de983049984e2672ec6d3e2, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 1
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_PasWood
+    clip: {fileID: 8300000, guid: 844492180de983049984e2672ec6d3e2, type: 3}
+    type: 1
+    volume: 1
+    pitch: 2
+    loop: 1
+    randomizePitch: 0
+    pitchRange: 0
+  - id: SFX_KeypadPress
+    clip: {fileID: 8300000, guid: e9ef2c9535be2884e87c642d16e1af93, type: 3}
+    type: 1
+    volume: 0.6
+    pitch: 2
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
+  - id: UI_UiPress
+    clip: {fileID: 8300000, guid: 1255c008c15bd5e4f8fb6b8053955249, type: 3}
+    type: 2
+    volume: 0.705
     pitch: 2
     loop: 0
     randomizePitch: 0
