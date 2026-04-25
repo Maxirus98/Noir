@@ -8,6 +8,7 @@ TagManager:
   - DetectiveBoard
   - Keypad
   - Header
+  - Door
   layers:
   - Default
   - TransparentFX
