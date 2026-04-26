@@ -31,11 +31,13 @@ public class Keypad : MonoBehaviour
     public void PressDot()
     {
         AddSymbol(".");
+        AudioManager.Instance.PlaySound("SFX_KeypadPress");
     }
 
     public void PressDash()
     {
         AddSymbol("-");
+        AudioManager.Instance.PlaySound("SFX_KeypadPress");
     }
 
     void AddSymbol(string symbol)
@@ -47,7 +49,7 @@ public class Keypad : MonoBehaviour
 
     public void Enter()
     {
-        // To come back from a char array
+        AudioManager.Instance.PlaySound("SFX_KeypadPress");
         currentInput = currentInput.ToString().Trim();
         correctCode = correctCode.ToString().Trim();
         if (currentInput.Equals(correctCode))
@@ -56,11 +58,15 @@ public class Keypad : MonoBehaviour
             door.SetActive(false);
             behindDoor.SetActive(true);
             keypad.SetActive(false);
+            AudioManager.Instance.PlaySound("SFX_KeypadCorrectCode");
+            AudioManager.Instance.PlaySound("SFX_LabDoor");
+
         }
         else
         {
             Debug.Log("Wrong code!");
             Clear();
+            AudioManager.Instance.PlaySound("SFX_KeypadwrongCode");
         }
 
 
@@ -70,10 +76,12 @@ public class Keypad : MonoBehaviour
     {
         currentInput = "";
         displayText.text = "";
+        AudioManager.Instance.PlaySound("SFX_KeypadPress");
     }
 
     public void ExitB()
     {
+        AudioManager.Instance.PlaySound("SFX_KeypadPress");
         keypad.SetActive(false);
     }
 }

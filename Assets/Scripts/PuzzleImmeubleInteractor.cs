@@ -10,6 +10,7 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
 
     [Header("UI")]
     private GameObject interactCanvas;
+    [SerializeField] private GameObject labKeypad;
 
     [Header("Puzzle Data")]
     [SerializeField] private DialogueData puzzleData;
@@ -171,6 +172,9 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
         //delay avant dialogue
         StartCoroutine(EndPuzzle2WithDialogue());
 
+        labKeypad.GetComponent<BoxCollider2D>().enabled= true;
+
+
     }
     private IEnumerator EndPuzzle2WithDialogue()
     {
@@ -190,7 +194,7 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
         ReturnCameraGameplay();
     }
 
-    private void ReturnCameraGameplay()
+    public void ReturnCameraGameplay()
     {
         isPuzzleActive = false;
 
@@ -206,6 +210,7 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
     {
         initialZoom = Camera.main.orthographicSize;
         initialCamPos = Camera.main.transform.position;
+        print(initialCamPos);
         Camera camComponent = Camera.main;
 
         Vector3 startPos = camComponent.transform.position;
@@ -248,8 +253,6 @@ public class PuzzleImmeubleInteractor : MonoBehaviour, IInteractable
                 targetZoom,
                 Time.deltaTime * 2f
             );
-
-            print("zoom");
 
             if (timerZoom >= maxZoomTime) break; // failsafe
 

@@ -26,6 +26,8 @@ public class MainMenu : Menu
     private IEnumerator OnPlayPressedRoutine()
     {
         AudioManager.Instance.PlaySound("UI_Submit");
+        // Delete all notes data
+        NoteSaveManager.DeleteAllNotes();
         yield return new WaitForSeconds(playDelay);
         TransitionManager.Instance.TransitionToScene(sceneName, fadeTransition, 1f);
     }
@@ -46,6 +48,7 @@ public class MainMenu : Menu
 
     public void OnQuitPressed()
     {
+        NoteSaveManager.DeleteAllNotes();
         Application.Quit();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // Exit option for editor 

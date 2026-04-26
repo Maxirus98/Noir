@@ -17,5 +17,5 @@ MonoBehaviour:
   Description: Plan de construction
   dialogueOnFound: {fileID: 11400000, guid: 656c1591d715dd646bf7cffbc975c467, type: 2}
   ExtraInformation: Un plan pour construire une machine destructrice
-  CanHelpToSolve: 0
-  InvestigationSlotType: 0
+  CanHelpToSolve: 1
+  InvestigationSlotType: 5

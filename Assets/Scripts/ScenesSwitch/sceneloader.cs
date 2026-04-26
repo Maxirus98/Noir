@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class sceneloader : MonoBehaviour
 {
@@ -40,5 +42,26 @@ public class sceneloader : MonoBehaviour
         // Move player
         player.transform.position = spawnPosition;
         SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        if (scene.name == "RuePlaytestD")
+        {
+            AudioManager.Instance.CrossFadeMusic("Music_AmbianceRue");
+        }
+        else if (scene.name == "BarD") 
+        {
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.CrossFadeMusic("Music_BarRadioStatic");
+      
+        }
+        else if (scene.name == "BureauPlaytestD")
+        {
+            AudioManager.Instance.StopMusic();
+        }
+        else if (scene.name == "LaboratoireD")
+        {
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.CrossFadeMusic("Music_TeleStatic");
+        }
     }
+
 }

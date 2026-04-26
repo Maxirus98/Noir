@@ -3,8 +3,9 @@ using UnityEngine;
 public class KeypadActive : MonoBehaviour, IInteractable
 
 {
-    public GameObject keypadPuzzleCanvas;
-    public GameObject interactCanvas;
+   [SerializeField] private GameObject keypadPuzzleCanvas;
+   [SerializeField] private GameObject interactCanvas;
+    [SerializeField] private GameObject kpCollider;
 
     private bool playerInRange = false;
     private bool puzzleSolved = false;
@@ -42,6 +43,7 @@ public class KeypadActive : MonoBehaviour, IInteractable
         keypadPuzzleCanvas.SetActive(false); // hide keypad
         interactCanvas.SetActive(false);
         playerInRange = false;
+        kpCollider.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     void IInteractable.Interact()

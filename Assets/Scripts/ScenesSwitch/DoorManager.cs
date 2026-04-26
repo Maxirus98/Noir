@@ -12,6 +12,11 @@ public class DoorManager : MonoBehaviour, IInteractable
     public void Interact()
     {
         sceneloader.instance.LoadScene(levelName, spawnPosition);
+        
+        if (CompareTag("Door"))
+       {
+            AudioManager.Instance.PlaySound("SFX_DoorOpenClose");
+       }
     }   
 
     void IInteractable.ShowKeypad()
