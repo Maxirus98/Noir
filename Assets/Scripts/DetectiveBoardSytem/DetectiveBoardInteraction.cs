@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class DetectiveBoardInteraction : MonoBehaviour, IInteractable
 {
-    [SerializeField]
-    private GameObject notepadUi;
+    private NotepadUiManager notepadUi;
     [SerializeField]
     private GameObject detectiveBoardUi;
 
@@ -11,7 +10,8 @@ public class DetectiveBoardInteraction : MonoBehaviour, IInteractable
     {
         Debug.Log("interacted with board");
         detectiveBoardUi.SetActive(!detectiveBoardUi.activeInHierarchy);
-        notepadUi.SetActive(detectiveBoardUi.activeInHierarchy);
+        notepadUi = FindAnyObjectByType<NotepadUiManager>(FindObjectsInactive.Include);
+        notepadUi.gameObject.SetActive(detectiveBoardUi.activeInHierarchy);
     }
 
     public void ShowKeypad()
