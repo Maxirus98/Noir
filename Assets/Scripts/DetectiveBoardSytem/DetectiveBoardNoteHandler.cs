@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VectorGraphics;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,6 +31,13 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
     [Tooltip("AuidoManager singleton to enable playback one shot sounds or music")]
     private AudioManager audioManager;
     private bool canClearBoardNotes = true;
+    private bool hasSolved = false;
+
+    [Header("Success Transition")]
+    [SerializeField] private float successDelay = 2f;
+    [SerializeField] private string sceneName;
+    [SerializeField] private FadeTransition fadeTransition;
+
     /// <summary>
     /// Check the notes that were added to avoid duplicates
     /// </summary>
@@ -129,15 +137,18 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
         yield return new WaitForSeconds(ROPES_ANIMATION_TIME_SECONDS);
 
         var solutionIsCorrect = notesAdded.All(n => n?.CanHelpToSolve == true);
-        if (solutionIsCorrect)
+        if (solutionIsCorrect && !hasSolved)
         {
-            // Solution is correct
+            hasSolved = true;
+
             Debug.Log("Solution is correct");
 
-            // TODO: Change Sound Id for Success sound
             audioManager.PlaySound("UI_Submit");
-            // TODO: Load end game cinematic
-        } else
+
+
+            StartCoroutine(InvestigationSuccessedRoutine());
+        }
+        else
         {
             // Solution is wrong
             // TODO: Change Sound Id for Fail sound
@@ -147,6 +158,18 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
             canClearBoardNotes = true;
             ClearBoardNotes();
         }
+    }
+
+    private IEnumerator InvestigationSuccessedRoutine()
+    {
+        yield return new WaitForSeconds(successDelay);
+
+        TransitionManager.Instance.TransitionToScene(sceneName, fadeTransition, 1f);
+       
+        // Enable board note clear
+        canClearBoardNotes = true;
+        ClearBoardNotes();
+        NoteSaveManager.DeleteAllNotes();
     }
 
     /// <summary>
