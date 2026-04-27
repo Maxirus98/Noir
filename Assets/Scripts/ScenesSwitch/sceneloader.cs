@@ -49,17 +49,17 @@ public class sceneloader : MonoBehaviour
         }
         else if (scene.name == "BarD") 
         {
-            AudioManager.Instance.StopMusic();
+           // AudioManager.Instance.StopMusic();
             AudioManager.Instance.CrossFadeMusic("Music_BarRadioStatic");
       
         }
         else if (scene.name == "BureauPlaytestD")
         {
-            AudioManager.Instance.StopMusic();
+           AudioManager.Instance.StopMusic();
         }
         else if (scene.name == "LaboratoireD")
         {
-            AudioManager.Instance.StopMusic();
+           // AudioManager.Instance.StopMusic();
             AudioManager.Instance.CrossFadeMusic("Music_TeleStatic");
         }
     }

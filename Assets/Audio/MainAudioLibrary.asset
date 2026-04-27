@@ -118,7 +118,7 @@ MonoBehaviour:
     randomizePitch: 0
     pitchRange: 0
   - id: Music_BarRadioStatic
-    clip: {fileID: 8300000, guid: 09484ecba4c26e942aa7495d4ecc3f89, type: 3}
+    clip: {fileID: 8300000, guid: b3806cb6301e7ba4788e5265612b6664, type: 3}
     type: 0
     volume: 0.188
     pitch: 2
@@ -142,7 +142,7 @@ MonoBehaviour:
     randomizePitch: 0
     pitchRange: 0
   - id: Music_TeleStatic
-    clip: {fileID: 8300000, guid: 6e7ce16fa02f3ee4b9cec2c7a862d33e, type: 3}
+    clip: {fileID: 8300000, guid: 297311b9a04518b45a396d2beb2653e7, type: 3}
     type: 0
     volume: 0.01
     pitch: 2
