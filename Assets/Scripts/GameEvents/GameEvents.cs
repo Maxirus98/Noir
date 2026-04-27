@@ -9,4 +9,5 @@ public static class GameEvents
     public static Action<bool> OnInspect; // When Loupe is on 
     public static Action<bool> OnToggleDetectiveBoard; // When DetectiveBoard is on 
     public static Action<bool> OnDialogueStart; // When Dialogue is on 
+    public static Action OnMidVillainDone; // vilain interaction
 }

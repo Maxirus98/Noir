@@ -125,6 +125,19 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("Indice saved: " + currentDialogue.indiceData.name);
         }
 
+       // CHECK MID-VILLAIN(UNE SEULE FOIS)
+        if (ProgressionManager.Instance.HasFlag("Meet_Villain") &&
+        !ProgressionManager.Instance.HasFlag("Villain_DONE"))
+        {
+            Debug.Log("VillainDone");
+
+            // marquer comme déjà fait
+            ProgressionManager.Instance.SetFlag("Villain_DONE");
+
+            // trigger event
+            GameEvents.OnMidVillainDone?.Invoke();
+        }
+
         currentDialogue = null;
 
         // Réactiver input

@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: D2RencontreVillainAVOIR
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   requiredFlags: []
-  setFlags: []
-  <indiceData>k__BackingField: {fileID: 11400000, guid: bce9b9a2ad141a6448984378653078fb, type: 2}
+  setFlags:
+  - Meet_Villain
+  <indiceData>k__BackingField: {fileID: 0}
   lines:
   - speaker: Vilain
-    sprite: {fileID: 0}
+    sprite: {fileID: 9203437765889865626, guid: 13beedda212d513448da0c43440418d2, type: 3}
     text: "Un autre d\xE9tectus qui va subir un mauvais sort."
     typingSpeed: 0.05
   - speaker: Noir
@@ -25,14 +26,14 @@ MonoBehaviour:
     text: "Qu\u2019est-ce que tu fais \xE0 la d\xE9tectus pr\xE9c\xE9dente !"
     typingSpeed: 0.05
   - speaker: Vilain
-    sprite: {fileID: 0}
+    sprite: {fileID: 9203437765889865626, guid: 13beedda212d513448da0c43440418d2, type: 3}
     text: "Moi, rien... \r\nJ\u2019ai plusieurs acolytes sous mon aile.\r\n"
     typingSpeed: 0.05
   - speaker: Vilain
-    sprite: {fileID: 0}
+    sprite: {fileID: 9203437765889865626, guid: 13beedda212d513448da0c43440418d2, type: 3}
     text: "Tu iras la voir \xE0 son travail. \r\n\r\n"
     typingSpeed: 0.05
   - speaker: Vilain
-    sprite: {fileID: 0}
+    sprite: {fileID: 9203437765889865626, guid: 13beedda212d513448da0c43440418d2, type: 3}
     text: Adieu sale mutant !
     typingSpeed: 0.05
