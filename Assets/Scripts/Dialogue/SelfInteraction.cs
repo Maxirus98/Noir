@@ -34,6 +34,8 @@ public class SelfInteraction : DialogueInteraction
         ProgressionManager.Instance.SetFlag(uniqueFlag);
 
         StartDialogue();
+        
+        //ici la logique ctu possible 
     }
 
 }
