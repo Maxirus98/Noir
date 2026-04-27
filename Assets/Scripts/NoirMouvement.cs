@@ -6,13 +6,11 @@ using UnityEngine.SceneManagement;
 public class NoirMouvement : MonoBehaviour
 {
     public float speed = 5f;
-
     private Vector2 movement;
 
     [SerializeField] 
     private Animator anim;
     public GameObject menu;
-
 
     public void OnMove(InputAction.CallbackContext context)
     {
