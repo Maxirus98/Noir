@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
-  m_Name: HeureDecesBarmaidData
+  m_Name: VilainData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 16
-  ItemSprite: {fileID: 21300000, guid: 35f6c382066f31c4d8ca1527850a2e12, type: 2}
-  Description: "Heure du d\xE9c\xE8s"
+  Id: 18
+  ItemSprite: {fileID: 21300000, guid: 5a6643ed580d6e64bb8779078558141e, type: 2}
+  Description: Le boss
   dialogueOnFound: {fileID: 0}
-  ExtraInformation: "La barmaid est morte \xE0 20h40"
-  CanHelpToSolve: 1
-  InvestigationSlotType: 4
+  ExtraInformation: "Il est \xE0 l' origine des op\xE9rations anti-d\xE9tectus, mais
+    il emploi des vandals pour son sale boulot"
+  CanHelpToSolve: 0
+  InvestigationSlotType: 0

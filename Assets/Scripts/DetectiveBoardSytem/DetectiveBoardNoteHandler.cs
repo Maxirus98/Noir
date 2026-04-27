@@ -143,7 +143,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
 
             Debug.Log("Solution is correct");
 
-            audioManager.PlaySound("UI_Submit");
+            audioManager.PlaySound("End");
 
 
             StartCoroutine(InvestigationSuccessedRoutine());
@@ -169,7 +169,10 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
         // Enable board note clear
         canClearBoardNotes = true;
         ClearBoardNotes();
+        
         NoteSaveManager.DeleteAllNotes();
+        var hud = GameObject.Find("HUD");
+        Destroy(hud);
     }
 
     /// <summary>

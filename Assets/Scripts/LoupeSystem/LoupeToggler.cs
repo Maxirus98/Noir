@@ -28,7 +28,6 @@ public class LoupeToggler : MonoBehaviour
 
     void Start()
     {
-        inspectionManager = FindAnyObjectByType<InspectionManager>();
         toggle.onValueChanged.AddListener(delegate
         {
             ToggleLoupe();
@@ -37,6 +36,7 @@ public class LoupeToggler : MonoBehaviour
 
     private void ToggleLoupe()
     {
+        inspectionManager = FindAnyObjectByType<InspectionManager>(FindObjectsInactive.Include);
         inspectionManager.ToggleLoupe();
     }
 }

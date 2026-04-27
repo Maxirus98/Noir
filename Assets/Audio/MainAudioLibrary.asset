@@ -189,3 +189,11 @@ MonoBehaviour:
     loop: 0
     randomizePitch: 0
     pitchRange: 0
+  - id: End
+    clip: {fileID: 8300000, guid: 5fe747bd4010c6741a68b03f8b97275e, type: 3}
+    type: 1
+    volume: 1
+    pitch: 1
+    loop: 0
+    randomizePitch: 0
+    pitchRange: 0
