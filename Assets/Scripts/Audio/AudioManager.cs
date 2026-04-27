@@ -180,7 +180,7 @@ public class AudioManager : MonoBehaviour
         return sound.pitch + Random.Range(-sound.pitchRange, sound.pitchRange);
     }
 
-    private AudioMixerGroup GetMixer(AudioType type)
+    public AudioMixerGroup GetMixer(AudioType type)
     {
         switch (type)
         {
