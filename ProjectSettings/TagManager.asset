@@ -58,6 +58,9 @@ TagManager:
   - name: Avant-Plan-Color
     uniqueID: 3179967403
     locked: 0
+  - name: Vilain
+    uniqueID: 1998722981
+    locked: 0
   - name: Avant-Plan-Noir
     uniqueID: 763221341
     locked: 0

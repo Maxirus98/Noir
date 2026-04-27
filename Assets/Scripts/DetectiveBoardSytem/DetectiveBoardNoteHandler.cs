@@ -165,7 +165,7 @@ public class DetectiveBoardNoteHandler : MonoBehaviour
         // Set Board Note Image
         var boardNoteImages = boardNote.GetComponentsInChildren<Image>(true);
         var boardNoteImage = boardNoteImages.FirstOrDefault(go => go.name.Equals("NoteImage"));
-        boardNoteImage.sprite = (Sprite)AssetDatabase.LoadAssetAtPath(note.SpritePath, typeof(Sprite));
+        boardNoteImage.sprite = Resources.Load<Sprite>(note.SpritePath);
     }
 
     private void OnDisable()

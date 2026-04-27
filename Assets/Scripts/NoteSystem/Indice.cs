@@ -27,10 +27,12 @@ public class Indice : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_EDITOR
         if (!data.IsIdUnique()) { 
             Debug.LogError($"Fix this error in order to start the game: The id of the {data.name} already exists on another {typeof(IndiceData).Name} ScriptableObject.");
             EditorApplication.isPlaying = false;
         }
+#endif
     }
 
     private void Start()

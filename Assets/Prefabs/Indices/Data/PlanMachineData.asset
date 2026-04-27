@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlanMachineData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
   Id: 12
-  ItemSprite: {fileID: -6958361515484101994, guid: 134c2c374c6b56b4da824abadca74b04, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 1a377206da972ef408e20a8b350aec93, type: 2}
   Description: Plan de construction
   dialogueOnFound: {fileID: 11400000, guid: 656c1591d715dd646bf7cffbc975c467, type: 2}
   ExtraInformation: Un plan pour construire une machine destructrice

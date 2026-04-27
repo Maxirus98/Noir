@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7078eab24f1514b91a19620ea1fbbc, type: 3}
   m_Name: CoupableTrouverData
   m_EditorClassIdentifier: Assembly-CSharp::IndiceData
-  Id: 16
-  ItemSprite: {fileID: 2259016082091114893, guid: 1d3f09464cb28ef43bfc4cecc67aacda, type: 3}
+  Id: 17
+  ItemSprite: {fileID: 21300000, guid: 42b3f127915966f4393c00a1a4391e82, type: 2}
   Description: "Coupable trouv\xE9"
   dialogueOnFound: {fileID: 0}
   ExtraInformation: Le coupable porte une longue veste transparente.

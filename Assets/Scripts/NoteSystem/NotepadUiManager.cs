@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -90,7 +89,7 @@ public class NotepadUiManager : MonoBehaviour
         if (currentIndex < notes.Count)
         {
             noteDescription.text = notes[currentIndex].Description;
-            noteImage.sprite = (Sprite) AssetDatabase.LoadAssetAtPath(notes[currentIndex].SpritePath, typeof(Sprite));
+            noteImage.sprite = Resources.Load<Sprite>(notes[currentIndex].SpritePath);
             noteExtraInfo.text = notes[currentIndex].ExtraInformation;
         }
     }

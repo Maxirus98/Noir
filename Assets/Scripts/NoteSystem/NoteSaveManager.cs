@@ -52,7 +52,7 @@ public static class NoteSaveManager
         notes.Add(new Note
         {
             Id = indiceData.Id,
-            SpritePath = AssetDatabase.GetAssetPath(indiceData.ItemSprite),
+            SpritePath = $"Indices/{indiceData.ItemSprite.name}",
             Description = indiceData.Description,
             ExtraInformation = indiceData.ExtraInformation,
             CanHelpToSolve = indiceData.CanHelpToSolve,

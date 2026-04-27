@@ -44,9 +44,12 @@ public class IndiceData : ScriptableObject
 
     private void OnValidate()
     {
+#if UNITY_EDITOR
         if (!IsIdUnique()) throw new UnityException($"This id already exists in the database! Change the ID of the {this.name}");
+#endif
     }
 
+#if UNITY_EDITOR
     /// <summary>
     /// Method to check if an IndiceData ID is unique in the assets folder.
     /// </summary>
@@ -67,6 +70,7 @@ public class IndiceData : ScriptableObject
         }
         return true;
     }
+#endif
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(IndiceData))]

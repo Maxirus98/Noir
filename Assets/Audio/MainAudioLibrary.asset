@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - id: Music_MainMenu
-    clip: {fileID: 8300000, guid: 5c850a35c11a0ca4789f0eb00dbdc0bf, type: 3}
+    clip: {fileID: 8300000, guid: 0db3e64776e4a534caa6a6847cb701aa, type: 3}
     type: 0
-    volume: 0.237
+    volume: 1
     pitch: 1
     loop: 1
     randomizePitch: 0
@@ -97,10 +97,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6d8fc7b24cbc1b24f91ba80cac2c11b7, type: 3}
     type: 1
     volume: 1
-    pitch: 2
+    pitch: 1.4
     loop: 0
-    randomizePitch: 0
-    pitchRange: 0
+    randomizePitch: 1
+    pitchRange: 0.1
   - id: Music_AmbianceRue
     clip: {fileID: 8300000, guid: 22150d197eaf0e0469c526978ac73756, type: 3}
     type: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
     type: 0
     volume: 0.01
     pitch: 2
-    loop: 0
+    loop: 1
     randomizePitch: 0
     pitchRange: 0
   - id: SFX_PasCiment
